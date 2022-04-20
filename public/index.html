@@ -112,7 +112,8 @@
             for (var i = 0; i < dataLink.length; i++) {
                  
                 var div = document.createElement("div");
-                div.innerHTML = 'LINK: ' + dataLink[i].linkId + ' ' + ' // Linktekst: '  + dataLink[i].linkTxt + ' ' + ' // Doel url:' + `<a href="${query}${dataLink[i].linkUrl}">` + query + dataLink[i].linkUrl + `</a>`;
+                // div.innerHTML = 'LINK: ' + dataLink[i].linkId + ' ' + ' // Linktekst: '  + dataLink[i].linkTxt + ' ' + ' // Doel url:' + `<a href="${query}${dataLink[i].linkUrl}">` + query + dataLink[i].linkUrl + `</a>`;
+                div.innerHTML = 'LINK: ' + dataLink[i].linkId + ' ' + ' // Linktekst: '  + dataLink[i].linkTxt + ' ' + ' // Doel url:' +  dataLink[i].linkUrl ;
                 // div.innerHTML = 'LINK: ' + data[i].imgId + ' ' + ' // Alt tekst: '  + data[i].alt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
                 mainContainer.appendChild(div);
             

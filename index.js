@@ -86,6 +86,7 @@ linkDetails = []
 
   for (let i = 0; i < urlHrefs.length; i++) {
     const href = await urlHrefs[i].getAttribute('href');
+   
           if(!href){
             href2 = '/#'
             }
