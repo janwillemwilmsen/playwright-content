@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="index.js"></script> -->
+</head>
+<body>
+
+    <h1>a11y</h1>
+    
+    <!-- Cloud Run: <a href="https://sitemap-detector-kykti36joa-nw.a.run.app/?url=toertocht.be">get toertocht.be sitemap</a><br> -->
+
+    Localhost : server testurl <a href="http://localhost:8080/api?url=https://essent.nl">essent.nl</a><br>
+    <!-- Localhost : frontend testurl <a href="http://localhost:8080/index.html?url=essent.nl">essent.nl</a> -->
+
+    <form  method="get" action="/index.html">
+        <input type="text" name="url" id="url" placeholder="url">
+        <input type="submit" value="Go">
+    </form>
+
+    <h2>results</h2>
+    <ul id="sitemaps"></ul>
+    <br><br>
+    <div id="myDataLink"></div>
+
+<script>
+
+    let params = (new URL(document.location)).searchParams;
+    let query = params.get('url');
+    console.log(query)
+
+  
+
+    // let sitemapapiurl = 'https://urlsitemaptool.vercel.app/?xmlsitemap='
+
+    document.getElementById('url').value = query;
+
+    const jsonData = ''
+
+    searchShow(query, jsonData)
+
+    async function searchShow(query) {
+        // showSpinner();
+        const domainUrl = `${query}`
+        console.log('DomainUrl', domainUrl)
+        // Trim evt
+        // /sitemap is GET url in Express
+        const apiUrl = 'http://localhost:8080/api?url='
+        // const apiUrl = 'https://sitemap-detector-kykti36joa-nw.a.run.app/sitemap?url='
+
+        
+        const url = apiUrl + domainUrl;
+        console.log(url)
+        const response = await fetch(url)
+        // .then(response => response.json() )
+        // .then((jsonData) => {
+        //     // console.log(data)
+        //     console.log(jsonData)
+        //     console.log('we got data');
+        //     // const results = jsonData.map(element => element )
+        //     // console.log('Results van api', results)
+
+        // //     const list = document.getElementById('sitemaps')
+        // //     list.innerHTML = ("");
+        // //     results.forEach(result => {
+        // //     const element = document.createElement('li')
+        // //     element.innerText = result.desc + ' ' + result.value;
+        // //     list.appendChild(element);
+        // // })
+
+        // }) 
+        // return response.json()
+        // return jsonData;
+
+       
+        .then(function (response) {
+                return response.json();
+                 
+                // response = JSON.parse(response);
+            })
+            .then(function (dataLink) {
+                appendData(dataLink);
+                // console.log(dataLink)
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(dataLink) {
+            var mainContainer = document.getElementById("myDataLink");
+            // const dataLinkpart = dataLink.linkId[i];
+            for (var i = 0; i < dataLink.length; i++) {
+                 
+                var div = document.createElement("div");
+                div.innerHTML = 'LINK: ' + dataLink[i].linkId + ' ' + ' // Linktekst: '  + dataLink[i].linkTxt + ' ' + ' // Doel url:' + `<a href="${query}${dataLink[i].linkUrl}">` + query + dataLink[i].linkUrl + `</a>`;
+                // div.innerHTML = 'LINK: ' + data[i].imgId + ' ' + ' // Alt tekst: '  + data[i].alt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
+                mainContainer.appendChild(div);
+            
+            }
+        }
+
+    }
+
+</script>
+
+    
+</body>
+</html>
