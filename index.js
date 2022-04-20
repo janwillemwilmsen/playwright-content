@@ -47,7 +47,9 @@ app.use(function (req, res, next) {
           res.setHeader('Content-Type', 'application/json');
 
 const entries = await page.$$('img');
-imgDetails = ["imgDetails"]
+// :::::::::::::::::::::
+imgDetails = []
+// imgDetails = ["imgDetails"]
 
   for (let i = 0; i < entries.length; i++) {
     // Query for the next title element on the page
@@ -78,7 +80,9 @@ imgDetails = ["imgDetails"]
 // END IMAGES 
 // START HEADINGS
 const urlHrefs = await page.$$('a, button');
+// :::::::::::::::::::::
 linkDetails = []
+// linkDetails = ["linkDetails"]
 
   for (let i = 0; i < urlHrefs.length; i++) {
     const href = await urlHrefs[i].getAttribute('href');
@@ -112,7 +116,9 @@ linkDetails.push({
 
 // const headIngs = await page.$$('h[1-6]>','ig');
 const headIngs = await page.$$("h1, h2, h3, h4, h5, h6, p");
-headingDetails = ["headingDetails"]
+// :::::::::::::::::::::
+headingDetails = []
+// headingDetails = ["headingDetails"]
 
   for (let i = 0; i < headIngs.length; i++) {
     // Query for the next title element on the page
@@ -156,7 +162,9 @@ headingDetails.push(
 // FORMS START
 
 const formhtml = await page.$$('form');
+// :::::::::::::::::::::
 formDetails = []
+// formDetails = ["formDetails"]
 
   for (let i = 0; i < formhtml.length; i++) {
     // const formcode = await formhtml[i].getAttribute('href');
@@ -181,7 +189,9 @@ formDetails.push({
 // FORMS START
 
 const tablehtml = await page.$$('table');
+// :::::::::::::::::::::
 tableDetails = []
+// tableDetails = ["tableDetails"]
 
   for (let i = 0; i < formhtml.length; i++) {
     // const formcode = await formhtml[i].getAttribute('href');
@@ -207,17 +217,20 @@ tableDetails.push({
 
 
 // totalArray = linkDetails + imgDetails
-// totalArray= linkDetails.concat(imgDetails).concat(headingDetails).concat(formDetails).concat(tableDetails);
+totalArray= linkDetails.concat(imgDetails).concat(headingDetails).concat(formDetails).concat(tableDetails);
 //  totalArray = [ linkDetails + imgDetails + headingDetails + formDetails + tableDetails ];
 // let totalArraySom = linkDetails + imgDetails + headingDetails + formDetails + tableDetails;
 
-// losse arrays
- totalArray = [linkDetails, imgDetails,  headingDetails, formDetails, tableDetails];
-console.log("TotalArray uit index.js", totalArray)
+// losse arrays met namen per groep DEZE geeft namen in de json:::::::::::::::::::::
+//  totalArray = [linkDetails, imgDetails,  headingDetails, formDetails, tableDetails];
+
+
+// console.log("TotalArray uit index.js", totalArray)
 // const totalArray = new Set([].concat(...totalArraySom));
 
-  res.send(JSON.stringify({totalArray}));
-  // res.send(totalArray);
+// :::::::::::::::::::::
+  // res.send(JSON.stringify({totalArray}));
+  res.send(totalArray);
  
 
   // res.send('jsonnn');
@@ -234,7 +247,7 @@ console.log("TotalArray uit index.js", totalArray)
 
     }
     // }     /////end van Async 
-    ///// test wat
+     
     
     });
       
