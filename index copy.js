@@ -54,8 +54,6 @@ imgDetails = []
   for (let i = 0; i < entries.length; i++) {
     // Query for the next title element on the page
     // const title = await entries[i].$('td.title > a');
-    const type = await entries[i].evaluate(e => e.tagName);
-
     const href = await entries[i].getAttribute('src');
                 var RgExp = new RegExp('^(?:[a-z]+:)?//', 'i');
                 href2 = ''
@@ -69,13 +67,11 @@ imgDetails = []
     const title = await entries[i].getAttribute('alt');
     // Write the entry to the console
     // console.log(`${i + 1}: ${await title.innerText()}`);
+     console.log(`${i + 1}: ${await title} ${await href2}`);
     // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
     // testExport.push(`{alt: ${await title}, src: ${await href}}`)
-    //   let allElements = (`${i + 1}: ${await title} ${await href}`);
-
-    // console.log(`${i + 1}: ${await title} ${await href2}`);
+//   let allElements = (`${i + 1}: ${await title} ${await href}`);
         imgDetails.push({
-            type: type,
             imgId: i,
             alt: title,
             src: href2
@@ -86,12 +82,9 @@ imgDetails = []
 const urlHrefs = await page.$$('a, button');
 // :::::::::::::::::::::
 linkDetails = []
-// linkDetails = ["linkDetails" + ":"]
-// linkDetails = [linkDetails]
+// linkDetails = ["linkDetails"]
 
   for (let i = 0; i < urlHrefs.length; i++) {
-    const type = await urlHrefs[i].evaluate(e => e.tagName);
-
     const href = await urlHrefs[i].getAttribute('href');
    
           if(!href){
@@ -103,13 +96,11 @@ linkDetails = []
     const linkTxt = await urlHrefs[i].textContent();
     const linkTxtR = linkTxt.replace(/\s/g,' ').trim()
     // console.log(`${i + 1}: ${await title.innerText()}`);
+     console.log(`${i + 1}: ${await linkTxtR} ${await href2}`);
     // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
     // testExport.push(`{alt: ${await title}, src: ${await href}}`)
-    //   let allElements = (`${i + 1}: ${await title} ${await href}`);
-
-    // console.log(`${i + 1}: ${await linkTxtR} ${await href2}`);
-    imgDetails.push({
-            type: type,
+//   let allElements = (`${i + 1}: ${await title} ${await href}`);
+linkDetails.push({
             linkId: i,
             linkTxt: linkTxtR,
             linkUrl: href2
@@ -131,8 +122,6 @@ headingDetails = []
 // headingDetails = ["headingDetails"]
 
   for (let i = 0; i < headIngs.length; i++) {
-    const type = await headIngs[i].evaluate(e => e.tagName);
-
     // Query for the next title element on the page
     // const title = await entries[i].$('td.title > a');
     // const type = await headIngs[i].tagName;
@@ -141,7 +130,8 @@ headingDetails = []
     const headingTxt = await headIngs[i].textContent();
     const headingTxtR = headingTxt.replace(/\s/g,' ').trim()
     // const type = await headIngs[i].getProperty('tagName').jsonValue();
-     // const type = headingTxtR.tagName;
+       const type = await headIngs[i].evaluate(e => e.tagName);
+    // const type = headingTxtR.tagName;
 
 // if (headIngs[i].tagName ='p') { 
 //     var type = 'paragraaf'
@@ -153,24 +143,22 @@ headingDetails = []
 
     // Write the entry to the console
     // console.log(`${i + 1}: ${await title.innerText()}`);
+     console.log(`${i + 1}: ${await headingTxtR} `);
     // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
     // testExport.push(`{alt: ${await title}, src: ${await href}}`)
-    //   let allElements = (`${i + 1}: ${await title} ${await href}`);
-    // headingDetails.('h1234567')
-    
-    // console.log(`${i + 1}: ${await headingTxtR} `);
-    imgDetails.push(
-              {
-                type: type,
-                headingId: i,
-                headingTxt: headingTxtR,
-                // linkUrl: href
-              });
-
-
-
+//   let allElements = (`${i + 1}: ${await title} ${await href}`);
+// headingDetails.('h1234567')
+headingDetails.push(
+            // "NaamVanDataNodesH1H2H3H4H5H6", 
+            {
+            headingId: i,
+            type: type,
+            headingTxt: headingTxtR,
+            // linkUrl: href
+        });
   }
- // END HEADINGS
+//   console.log(headingDetails)
+// END HEADINGS
 
 // FORMS START
 
@@ -180,8 +168,6 @@ formDetails = []
 // formDetails = ["formDetails"]
 
   for (let i = 0; i < formhtml.length; i++) {
-    const type = await formhtml[i].evaluate(e => e.tagName);
-
     // const formcode = await formhtml[i].getAttribute('href');
     const formcode = await formhtml[i].innerHTML();
               
@@ -189,13 +175,11 @@ formDetails = []
     // const linkTxtR = linkTxt.replace(/\s/g,' ').trim()
 
     // console.log(`${i + 1}: ${await title.innerText()}`);
+     console.log(`${i + 1}: ${await formcode} `);
     // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
     // testExport.push(`{alt: ${await title}, src: ${await href}}`)
-    //   let allElements = (`${i + 1}: ${await title} ${await href}`);
-
-    // console.log(`${i + 1}: ${await formcode} `);
-    imgDetails.push({
-            type: type,
+//   let allElements = (`${i + 1}: ${await title} ${await href}`);
+formDetails.push({
             formId: i,
             formHtmlCode: formcode
             // linkUrl: href
@@ -211,8 +195,6 @@ tableDetails = []
 // tableDetails = ["tableDetails"]
 
   for (let i = 0; i < formhtml.length; i++) {
-    const type = await tablehtml[i].evaluate(e => e.tagName);
-
     // const formcode = await formhtml[i].getAttribute('href');
     const tablecode = await tablehtml[i].innerHTML();
               
@@ -220,18 +202,15 @@ tableDetails = []
     // const linkTxtR = linkTxt.replace(/\s/g,' ').trim()
 
     // console.log(`${i + 1}: ${await title.innerText()}`);
+     console.log(`${i + 1}: ${await tablecode} `);
     // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
     // testExport.push(`{alt: ${await title}, src: ${await href}}`)
-    //   let allElements = (`${i + 1}: ${await title} ${await href}`);
-
-    // console.log(`${i + 1}: ${await tablecode} `);
-    imgDetails.push({
-            type: type,
+//   let allElements = (`${i + 1}: ${await title} ${await href}`);
+tableDetails.push({
             tableId: i,
             tableHtmlCode: tablecode
             // linkUrl: href
         });
-        console.log(tableDetails)
   }
 // FORMS END
 
@@ -239,44 +218,8 @@ tableDetails = []
 
 
 // totalArray = linkDetails + imgDetails
-
-// totalArray = linkDetails.concat(imgDetails).concat(headingDetails).concat(formDetails).concat(tableDetails);
-
-// // const lll = '{links: {' + ` ${linkDetails} `+ '}}'
-// const lll =  linkDetails 
-// console.log(lll)
-
-const link = (JSON.stringify({linkDetails}));
-const img =  (JSON.stringify({imgDetails}));
-const head = (JSON.stringify({headingDetails}));
-const forms = (JSON.stringify({formDetails}));
-const tbl = (JSON.stringify({tableDetails}));
-console.log(link)
-console.log(img)
-console.log(head)
-console.log(forms)
-console.log(tbl)
-
-// let totalArray = link + img
-let totalArray = img
-// let totalArray = link + img + head + forms + tbl
-
-
-
-// let totalArray = link.concat(img).concat(head).concat(forms).concat(tbl);
-// let totalArray = [...link, ...img, ...head, ...forms, ...tbl];
-
+totalArray= linkDetails.concat(imgDetails).concat(headingDetails).concat(formDetails).concat(tableDetails);
 //  totalArray = [ linkDetails + imgDetails + headingDetails + formDetails + tableDetails ];
-//  totalArray =  link + "," + img + "," + head + "," + forms + "," + tbl 
-//  totalArray =  link + "," + img + "," + head;
-
-//  const total = []
-//  total.push({totalArray})
-
-// totalArray = []
-// totalArray = link.concat(img).concat(head)
-//  totalArray =  [ link + "," + img + "," + head ];
- console.log(totalArray)
 // let totalArraySom = linkDetails + imgDetails + headingDetails + formDetails + tableDetails;
 
 // losse arrays met namen per groep DEZE geeft namen in de json:::::::::::::::::::::
@@ -287,7 +230,7 @@ let totalArray = img
 // const totalArray = new Set([].concat(...totalArraySom));
 
 // :::::::::::::::::::::
-  // res.send(JSON.stringify(totalArray));
+  // res.send(JSON.stringify({totalArray}));
   res.send(totalArray);
  
 

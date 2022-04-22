@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="index.js"></script> -->
+    <!-- <script src="index.js"></script>  -->
 </head>
 <body>
 
@@ -25,7 +25,7 @@
     <br>
     
     <h3>Links</h3>
-    <div id="myDataLink"></div>
+    <div id="myData"></div>
 
     <h3>Afbeeldingen met alt teksten</h3>
     <div id="myDataImg"></div>
@@ -39,7 +39,7 @@
     <h3>Tabellen</h3>
     <div id="myDataTables"></div>
     
-
+    <pre id="json"></pre>
 
 <script>
 
@@ -96,9 +96,9 @@
                  
                 // response = JSON.parse(response);
             })
-            .then(function (dataLink) {
-                appendData(dataLink);
-                // console.log(dataLink)
+            .then(function (data) {
+                appendData(data);
+                console.log(data)
             })
             .catch(function (err) {
                 console.log('error: ' + err);
@@ -106,18 +106,22 @@
 
             // Code hieronder lijst alle items uit de Json uit. Alle, dus de afbeeldingen, links, headings, tabellen en forms. Wil de items per onderdeel kunnen uitlijsten.
 
-        function appendData(dataLink) {
-            var mainContainer = document.getElementById("myDataLink");
-            // const dataLinkpart = dataLink.linkId[i];
-            for (var i = 0; i < dataLink.length; i++) {
+        function appendData(data) {
+
+            document.getElementById("json").textContent = JSON.stringify(data, undefined, 2);
+
+
+            // var mainContainer = document.getElementById("myData");
+            // // const datapart = data.linkId[i];
+            // for (var i = 0; i < data.length; i++) {
                  
-                var div = document.createElement("div");
-                // div.innerHTML = 'LINK: ' + dataLink[i].linkId + ' ' + ' // Linktekst: '  + dataLink[i].linkTxt + ' ' + ' // Doel url:' + `<a href="${query}${dataLink[i].linkUrl}">` + query + dataLink[i].linkUrl + `</a>`;
-                div.innerHTML = 'LINK: ' + dataLink[i].linkId + ' ' + ' // Linktekst: '  + dataLink[i].linkTxt + ' ' + ' // Doel url:' +  dataLink[i].linkUrl ;
-                // div.innerHTML = 'LINK: ' + data[i].imgId + ' ' + ' // Alt tekst: '  + data[i].alt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
-                mainContainer.appendChild(div);
-            
-            }
+            //     var div = document.createElement("div");
+            //     // div.innerHTML = 'LINK: ' + data[i].linkId + ' ' + ' // Linktekst: '  + data[i].linkTxt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
+            //     // div.innerHTML = 'LINK: ' + data[i].linkId + ' ' + ' // Linktekst: '  + data[i].linkTxt + ' ' + ' // Doel url:' +  data[i].linkUrl ;
+            //     div.innerHTML = 'LINK: ' +  imgDetails.type[A] + ' ' + ' // Linktekst:' +  imgDetails.type[A] + ' ' + ' // Doel url:' + imgDetails.type[A] ;
+            //     // div.innerHTML = 'LINK: ' + data[i].imgId + ' ' + ' // Alt tekst: '  + data[i].alt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
+            //     mainContainer.appendChild(div);
+            // }
         }
 
     }
