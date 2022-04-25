@@ -1,133 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A11y - Accessibilty Content Checker</title>
+    <!-- Tailwind CSS CDN -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+
     <!-- <script src="index.js"></script>  -->
-</head>
-<body>
-
-    <h1>content a11y</h1>
-    
-    <!-- Cloud Run: <a href="https://sitemap-detector-kykti36joa-nw.a.run.app/?url=toertocht.be">get toertocht.be sitemap</a><br> -->
-
-    Localhost : server testurl <a href="http://localhost:8080/api?url=https://essent.nl">essent.nl</a><br>
-    <!-- Localhost : frontend testurl <a href="http://localhost:8080/index.html?url=essent.nl">essent.nl</a> -->
-
-    <form  method="get" action="/index.html">
-        <input type="text" name="url" id="url" placeholder="url">
-        <input type="submit" value="Go">
-    </form>
-
-    <h2>results</h2>
-    <br>
-    
-    <h3>Links</h3>
-    <div id="myData"></div>
-
-    <h3>Afbeeldingen met alt teksten</h3>
-    <div id="myDataImg"></div>
-
-    <h3>Heading en paragraven</h3>
-    <div id="myDataHeadings"></div>
-
-    <h3>Formulieren</h3>
-    <div id="myDataForms"></div>
-    
-    <h3>Tabellen</h3>
-    <div id="myDataTables"></div>
-    
-    <pre id="json"></pre>
-
-<script>
-
-    let params = (new URL(document.location)).searchParams;
-    let query = params.get('url');
-    console.log(query)
+  </head>
+  <body>
+    <!-- Jumbotron -->
+    <div class="p-6 rounded-lg bg-gray-100">
+      <a href="/">
+        <h1 class="font-semibold text-3xl mb-5">Content a11y checker</h1>
+      </a>
+      <p>
+        Simple accessibilty checker for content. Make sure you have a logical
+        page structure, readable alt texts, and links with meaning.
+      </p>
 
   
 
-    // let sitemapapiurl = 'https://urlsitemaptool.vercel.app/?xmlsitemap='
 
-    document.getElementById('url').value = query;
+      <!-- Cloud Run: <a href="https://sitemap-detector-kykti36joa-nw.a.run.app/?url=toertocht.be">get toertocht.be sitemap</a><br> -->
+                    <span class="text-sm italic">
+                    ( Api testurl: <a href="/api?url=https://essent.nl">essent.nl</a> // Frontend testurl <a href="/index.html?url=https://essent.nl">essent.nl</a> //
+                    <a href="/index.html?url=https://www.essent.nl/content/particulier/producten/stroom_gas/index.html">essent.nl S&G</a> // <a href="/index.html?url=https://www.essent.nl/content/particulier/energie-besparen/zonneboilers/index.html">essent.nl boilers</a> //<a href="/index.html?url=https://kpn.nl">kpn.nl</a> //<a href="/index.html?url=https://vattenfall.nl">vattenfall.nl</a> //
+                    <a href="/index.html?url=https://tele2.nl">tele2.nl</a>)
+                    </span>
+    </div>
 
-    const jsonData = ''
-
-    searchShow(query, jsonData)
-
-    async function searchShow(query) {
-        // showSpinner();
-        const domainUrl = `${query}`
-        console.log('DomainUrl', domainUrl)
-        // Trim evt
-        // /sitemap is GET url in Express
-        const apiUrl = 'http://localhost:8080/api?url='
-        // const apiUrl = 'https://sitemap-detector-kykti36joa-nw.a.run.app/sitemap?url='
-
-        
-        const url = apiUrl + domainUrl;
-        console.log(url)
-        const response = await fetch(url)
-        // .then(response => response.json() )
-        // .then((jsonData) => {
-        //     // console.log(data)
-        //     console.log(jsonData)
-        //     console.log('we got data');
-        //     // const results = jsonData.map(element => element )
-        //     // console.log('Results van api', results)
-
-        // //     const list = document.getElementById('sitemaps')
-        // //     list.innerHTML = ("");
-        // //     results.forEach(result => {
-        // //     const element = document.createElement('li')
-        // //     element.innerText = result.desc + ' ' + result.value;
-        // //     list.appendChild(element);
-        // // })
-
-        // }) 
-        // return response.json()
-        // return jsonData;
-
-       
-        .then(function (response) {
-                return response.json();
-                 
-                // response = JSON.parse(response);
-            })
-            .then(function (data) {
-                appendData(data);
-                console.log(data)
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-
-            // Code hieronder lijst alle items uit de Json uit. Alle, dus de afbeeldingen, links, headings, tabellen en forms. Wil de items per onderdeel kunnen uitlijsten.
-
-        function appendData(data) {
-
-            document.getElementById("json").textContent = JSON.stringify(data, undefined, 2);
+    <div class="sticky top-0 shadow-lg w-full bg-gray-100 text-gray-700">
+      <div class="flex flex-row mx-auto text-center justify-center">
+        <div><a class="mx-2 text-sm" href="#headings">Headings</a></div>
+        <div><a class="mx-2 text-sm" href="#links">Links</a></div>
+        <div><a class="mx-2 text-sm" href="#images">Images</a></div>
+        <div><a class="mx-2 text-sm" href="#forms">Forms</a></div>
+        <div><a class="mx-2 text-sm" href="#tables">Tables</a></div>
+      </div>
+    </div>
+    <a name="results"></a>
+    <form method="get"  id="my_form"  action="/#results">
+        <!-- <form method="get"  id="my_form" action="" onsubmit="searchShow(query);"> -->
 
 
-            // var mainContainer = document.getElementById("myData");
-            // // const datapart = data.linkId[i];
-            // for (var i = 0; i < data.length; i++) {
-                 
-            //     var div = document.createElement("div");
-            //     // div.innerHTML = 'LINK: ' + data[i].linkId + ' ' + ' // Linktekst: '  + data[i].linkTxt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
-            //     // div.innerHTML = 'LINK: ' + data[i].linkId + ' ' + ' // Linktekst: '  + data[i].linkTxt + ' ' + ' // Doel url:' +  data[i].linkUrl ;
-            //     div.innerHTML = 'LINK: ' +  imgDetails.type[A] + ' ' + ' // Linktekst:' +  imgDetails.type[A] + ' ' + ' // Doel url:' + imgDetails.type[A] ;
-            //     // div.innerHTML = 'LINK: ' + data[i].imgId + ' ' + ' // Alt tekst: '  + data[i].alt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
-            //     mainContainer.appendChild(div);
-            // }
-        }
+      <div class="container my-24 px-6 mx-auto">
+        <section class="mb-10 text-gray-800 text-center">
+          <div class="flex flex-wrap justify-center">
+            <div class="grow-0 shrink-0 flex-basis w-full lg:w-6/12 px-3">
+              <div class="md:flex flex-row">
+                <input
+                  type="text"
+                  name="url"
+                  id="url"
+                  placeholder="url"
+                  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                />
+                <input
+                  type="button"
+                  onclick="submit_form()"
+                  value="Go"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="success"
+                  class="inline-block px-6 py-2.5 bg-blue-800 text-gray-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </form>
 
+    <div class="px-6" id="resultList">
+      <a name="headings"></a>
+      <div class="w-1 h-5"></div>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">        Headings and paragraphs    </h3>
+      <ul id="myDataTextContent"></ul>
+
+      <a name="links"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Links       </h3>
+      <ul id="myDataLinks"></ul>
+
+      <a name="images"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Images      </h3>
+      <p>
+        <!-- Gray background is added for visibilty of transparant and white images.  -->
+        Broken images are inline svg files(cannot embed them). Background images are not listed.
+      </p>
+      <ul id="myDataImg"></ul>
+
+      <a name="forms"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Forms      </h3>
+      <ul id="myDataForms"></ul>
+
+      <a name="tables"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Tables      </h3>
+      <ul id="myDataTables"></ul>
+
+      <a name="video"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Video      </h3>
+      <ul id="myDataVideo"></ul>
+
+
+      <a name="landmarks"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Landmarks      </h3>
+      <ul id="myDataLandmarks"></ul>
+
+      <a name="area"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Area      </h3>
+      <ul id="myDataArea"></ul>
+
+      <a name="iframe"></a>
+      <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Iframe      </h3>
+      <ul id="myDataIframe"></ul>
+
+      <pre id="json"></pre>
+
+      <!-- Back to top button sad-->
+
+      <button
+        type="button"
+        class="inline-block float-right p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5 sticky"
+        id="btn-back-to-top"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          class="w-4 h-4"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="spinnervideo" class="flex justify-center items-center   w-full  ">
+      <video width="250" autoplay muted loop class="w-96 justify-center mx-auto">
+        <source src="/s.mp4" type="video/mp4" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
+
+    <ul id="status"></ul>
+
+
+    <script>
+
+
+
+      const spinner = document.getElementById("spinnervideo");
+      const totalresultlist = document.getElementById("resultList");
+
+      function showSpinner() {
+        spinner.style.display = "block";
+      }
+
+      function hideSpinner() {
+        spinner.style.display = "none";
+      }
+      hideSpinner();
+
+      function hideResults() {
+        totalresultlist.style.display = "none";
+        showSpinner()
+      }
+      hideResults();
+
+      function showResultsList() {
+        totalresultlist.style.display = "block";
+      }
+
+      let params = new URL(document.location).searchParams;
+      let query = params.get("url");
+      console.log(query);
+
+
+      if (query === null){
+        hideSpinner();
+      }
+
+      // let sitemapapiurl = 'https://urlsitemaptool.vercel.app/?xmlsitemap='
+
+      document.getElementById("url").value = query;
+
+      function submit_form(){
+        var form = document.getElementById("my_form");
+        form.submit();
+     
+        // alert("Your Message Sent");
     }
 
-</script>
+      searchShow(query);
 
-    
-</body>
+      async function searchShow(query) {
+      
+        const domainUrl = `${query}`;
+        console.log("DomainUrl", domainUrl);
+        // Trim evt
+        // /sitemap is GET url in Express
+        const apiUrl = "/api?url=";
+        // const apiUrl = "http://localhost:8080/api?url=";
+        // const apiUrl = 'https://sitemap-detector-kykti36joa-nw.a.run.app/sitemap?url='
+
+        function updateStatus() {
+          const status = document.getElementById('status');
+          const li = document.createElement('li');
+          
+          li.innerHTML = 'Ophalen data';
+          status.appendChild(li);
+        }
+
+        const url = apiUrl + domainUrl;
+        console.log(url);
+        const response = await fetch(url)
+          // .then(response => response.json() )
+          // .then((jsonData) => {
+          //     // console.log(data)
+          //     console.log(jsonData)
+          //     console.log('we got data');
+          //     // const results = jsonData.map(element => element )
+          //     // console.log('Results van api', results)
+
+          // //     const list = document.getElementById('sitemaps')
+          // //     list.innerHTML = ("");
+          // //     results.forEach(result => {
+          // //     const element = document.createElement('li')
+          // //     element.innerText = result.desc + ' ' + result.value;
+          // //     list.appendChild(element);
+          // // })
+
+          // })
+          // return response.json()
+          // return jsonData;
+          .then(function (response) {
+            updateStatus()  
+            return response.json();
+            // response = JSON.parse(response);
+          })
+          .then(function (data) {
+            const textElement = data.filter(function (item) {
+              return item.type === "textElement";
+            });
+            // .map(function (item){
+            //     delete item.type;
+            //     return {
+            //         id: item.headingId,
+            //         txt: item.headingTxt,
+            //     }
+            // })
+            const imageElement = data.filter(function (item) {
+              return item.type === "img";
+            });
+            const linkElement = data.filter(function (item) {
+              return item.type === "linkElement";
+            });
+
+            const formElement = data.filter(function (item) {
+              return item.type === "form";
+            });
+
+            const tableElements = data.filter(function (item) {
+              return item.type === "table";
+            });
+
+            displayData({
+              textElement,
+              linkElement,
+              imageElement,
+              formElement,
+              tableElements,
+            });
+            // console.log(data)
+
+            showScrollButton();
+            showResultsList();
+            hideSpinner();
+          })
+          .catch(function (err) {
+            console.log("error: " + err);
+          });
+
+        // Code hieronder lijst alle items uit de Json uit. Alle, dus de afbeeldingen, links, headings, tabellen en forms. Wil de items per onderdeel kunnen uitlijsten.
+
+        function displayData(data) {
+            
+          // event.preventDefault();
+          // PREview van alle Json code !!!!!!!!!!!!!!!!!
+          // document.getElementById("json").textContent = JSON.stringify(data, undefined, 2);
+
+          // function rendersitemapdotxmlBestaat (results, query){
+          // const div1 = document.getElementById('myDataImg')
+          // if (data.imgDetails.type === 'A')  {
+          // console.log(data)
+          // div1.innerHTML = ("");
+          // div1.textContent = 'Visit ' + 'query' + '/sitemap.xml'
+          // div1.href = data[0].value
+
+          // let submit = document.createElement('a');
+          // submit.innerHTML = ("");
+          // submit.className = 'bg-red-700 rounded-xl text-white';
+          // submit.textContent = 'Test this sitemap'
+          // submit.href = 'sitemapapiurl + results[0].value'
+          // div1.after(submit)
+          // }
+
+          // }
+
+          var mainContainer = document.getElementById("myDataTextContent");
+          // console.log('mainContainer connected to Dom with ID')
+          // // const datapart = data.linkId[i];
+          // console.log(data.textelement)
+          const textnodes = data.textElement;
+
+          for (var i = 0; i < textnodes.length; i++) {
+            //  console.log('For x in x loop')
+            //  console.log(textnodes[i])
+            var li = document.createElement("li");
+            li.classList.add('elementItem');
+            // li.innerHTML = 'HALLOOOO'
+            li.innerHTML =
+              '<div class="text-md text-blue-500 w-5 inline-block">' +
+              textnodes[i].element +
+              "</div>  " +
+              textnodes[i].headingTxt;
+            //     // div.innerHTML = 'LINK: ' + data[i].linkId + ' ' + ' // Linktekst: '  + data[i].linkTxt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
+            //     // div.innerHTML = 'LINK: ' + data[i].linkId + ' ' + ' // Linktekst: '  + data[i].linkTxt + ' ' + ' // Doel url:' +  data[i].linkUrl ;
+            //        div.innerHTML = 'LINK: ' +  imgDetails.type[A] + ' ' + ' // Linktekst:' +  imgDetails.type[A] + ' ' + ' // Doel url:' + imgDetails.type[A] ;
+            //     // div.innerHTML = 'LINK: ' + data[i].imgId + ' ' + ' // Alt tekst: '  + data[i].alt + ' ' + ' // Doel url:' + `<a href="${query}${data[i].linkUrl}">` + query + data[i].linkUrl + `</a>`;
+            mainContainer.appendChild(li);
+          }
+
+          const linklist = document.getElementById("myDataLinks");
+          console.log(data.linkElement);
+          const linkNodes = data.linkElement;
+
+          for (var i = 0; i < linkNodes.length; i++) {
+            const li = document.createElement("li");
+            li.classList.add('elementItem')
+            li.innerHTML =
+            '<div class="text-md text-blue-500 w-8 inline-block"> Text</div> &nbsp; "' +
+              linkNodes[i].linkTxt +
+              '" &nbsp; <div class="text-md text-blue-500 w-16 inline-block">links to:</div> "' +
+              linkNodes[i].linkUrl +
+              '"';
+            linklist.appendChild(li);
+          }
+
+          const imageList = document.getElementById("myDataImg");
+          // console.log(data.imageElement)
+          const imageNodes = data.imageElement;
+
+          for (var i = 0; i < imageNodes.length; i++) {
+            const li = document.createElement("li");
+            li.classList.add('elementItem')
+            li.innerHTML =
+              '<img src="' +
+              imageNodes[i].src +
+              '">' +
+              '<div class="text-md text-blue-500 w-24 inline-block"> with alt text</div>' +
+              imageNodes[i].alt;
+            imageList.appendChild(li);
+          }
+
+          const formsList = document.getElementById("myDataForms");
+          const formsNodes = data.formElement;
+
+          if (formsNodes.length === 0 ){
+            const li = document.createElement("li");
+            li.classList.add('elementItem')
+            li.textContent = `No forms found`;
+            formsList.appendChild(li);
+          }
+          else{
+
+            for (var i = 0; i < formsNodes.length; i++) {
+              const li = document.createElement("li");
+              li.textContent = `html of the form:` + formsNodes[i].formHtmlCode;
+              formsList.appendChild(li);
+            }
+          }
+            
+         
+
+          const tableList = document.getElementById("myDataTables");
+          const tableNodes = data.tableElements;
+
+          if (tableNodes.length === 0 ){
+            const li = document.createElement("li");
+            li.classList.add('elementItem')
+            li.textContent = `No tables found`;
+            tableList.appendChild(li);
+          }
+          else{
+
+          for (var i = 0; i < tableNodes.length; i++) {
+            const li = document.createElement("li");
+            li.classList.add('elementItem')
+            li.textContent = `html of the table:` + tableNodes[i].tableHtmlCode;
+            tableList.appendChild(li);
+          }
+          }
+        }
+      }
+    </script>
+
+    <script src="/topbutton.js" defer="defer"></script>
+  </body>
 </html>

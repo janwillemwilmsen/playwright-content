@@ -48,13 +48,14 @@ app.use(function (req, res, next) {
 
 const entries = await page.$$('img');
 // :::::::::::::::::::::
-imgDetails = []
-// imgDetails = ["imgDetails"]
+elementDetails = []
+// elementDetails = ["elementDetails"]
 
   for (let i = 0; i < entries.length; i++) {
     // Query for the next title element on the page
     // const title = await entries[i].$('td.title > a');
-    const type = await entries[i].evaluate(e => e.tagName);
+    const elementType = await entries[i].evaluate(e => e.tagName);
+    const type = elementType.toLowerCase();
 
     const href = await entries[i].getAttribute('src');
                 var RgExp = new RegExp('^(?:[a-z]+:)?//', 'i');
@@ -74,7 +75,7 @@ imgDetails = []
     //   let allElements = (`${i + 1}: ${await title} ${await href}`);
 
     // console.log(`${i + 1}: ${await title} ${await href2}`);
-        imgDetails.push({
+        elementDetails.push({
             type: type,
             imgId: i,
             alt: title,
@@ -90,8 +91,9 @@ linkDetails = []
 // linkDetails = [linkDetails]
 
   for (let i = 0; i < urlHrefs.length; i++) {
-    const type = await urlHrefs[i].evaluate(e => e.tagName);
-
+    const elementType = await urlHrefs[i].evaluate(e => e.tagName);
+    const typeElement = elementType.toLowerCase();
+    const type = 'linkElement'
     const href = await urlHrefs[i].getAttribute('href');
    
           if(!href){
@@ -108,8 +110,9 @@ linkDetails = []
     //   let allElements = (`${i + 1}: ${await title} ${await href}`);
 
     // console.log(`${i + 1}: ${await linkTxtR} ${await href2}`);
-    imgDetails.push({
+    elementDetails.push({
             type: type,
+            element: typeElement,
             linkId: i,
             linkTxt: linkTxtR,
             linkUrl: href2
@@ -131,8 +134,9 @@ headingDetails = []
 // headingDetails = ["headingDetails"]
 
   for (let i = 0; i < headIngs.length; i++) {
-    const type = await headIngs[i].evaluate(e => e.tagName);
-
+    const elementType = await headIngs[i].evaluate(e => e.tagName);
+    const typeElement = elementType.toLowerCase();
+    const type = 'textElement'
     // Query for the next title element on the page
     // const title = await entries[i].$('td.title > a');
     // const type = await headIngs[i].tagName;
@@ -159,9 +163,10 @@ headingDetails = []
     // headingDetails.('h1234567')
     
     // console.log(`${i + 1}: ${await headingTxtR} `);
-    imgDetails.push(
+    elementDetails.push(
               {
                 type: type,
+                element: typeElement,
                 headingId: i,
                 headingTxt: headingTxtR,
                 // linkUrl: href
@@ -180,7 +185,8 @@ formDetails = []
 // formDetails = ["formDetails"]
 
   for (let i = 0; i < formhtml.length; i++) {
-    const type = await formhtml[i].evaluate(e => e.tagName);
+    const elementType = await formhtml[i].evaluate(e => e.tagName);
+    const type = elementType.toLowerCase();
 
     // const formcode = await formhtml[i].getAttribute('href');
     const formcode = await formhtml[i].innerHTML();
@@ -194,7 +200,7 @@ formDetails = []
     //   let allElements = (`${i + 1}: ${await title} ${await href}`);
 
     // console.log(`${i + 1}: ${await formcode} `);
-    imgDetails.push({
+    elementDetails.push({
             type: type,
             formId: i,
             formHtmlCode: formcode
@@ -203,59 +209,112 @@ formDetails = []
   }
 // FORMS END
 
-// FORMS START
+// // FORMS START
 
 const tablehtml = await page.$$('table');
 // :::::::::::::::::::::
 tableDetails = []
 // tableDetails = ["tableDetails"]
 
-  for (let i = 0; i < formhtml.length; i++) {
-    const type = await tablehtml[i].evaluate(e => e.tagName);
+  for (let i = 0; i < tablehtml.length; i++) {
+    const elementType = await tablehtml[i].evaluate(e => e.tagName);
+    const type = elementType.toLowerCase();
 
     // const formcode = await formhtml[i].getAttribute('href');
     const tablecode = await tablehtml[i].innerHTML();
-              
-    // const linkTxt = await formhtml[i].textContent();
-    // const linkTxtR = linkTxt.replace(/\s/g,' ').trim()
-
-    // console.log(`${i + 1}: ${await title.innerText()}`);
-    // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
-    // testExport.push(`{alt: ${await title}, src: ${await href}}`)
-    //   let allElements = (`${i + 1}: ${await title} ${await href}`);
-
-    // console.log(`${i + 1}: ${await tablecode} `);
-    imgDetails.push({
+     // console.log(`${i + 1}: ${await tablecode} `);
+    elementDetails.push({
             type: type,
             tableId: i,
             tableHtmlCode: tablecode
             // linkUrl: href
         });
-        console.log(tableDetails)
+        // console.log(tableDetails)
   }
 // FORMS END
+
+// IFRAME START
+
+// let innerIframehtmlArr = []
+
+// let innerIframehtmlOuter = await page.$$('iframe');
+
+let innerIframehtml = page.frames().map((f) => f.url())
+// const backToNumbers = JSON.parse(innerIframehtml)
+// console.log(backToNumbers)
+// let innerIframehtml = await feedHandle.$$eval('.tweet', nodes => nodes.map(n => n.innerText)).toEqual(['Hello!', 'Hi!']);
+
+
+// let innerIframehtml2 = page.frames().map((nodes) => nodes.getAttribute(src))
+// console.log("frames", innerIframehtml2);
+
+
+
+
+// const frameElement = await frame.frameElement();
+// const contentFrame = await frameElement.contentFrame();
+// console.log(frame === contentFrame);  // -> true
+
+
+
+// innerIframehtml.push({
+//   "type":"iframe",
+//   "iframeHtmlCode":"peop"
+// })
+
+// innerIframehtmlArr.push({
+//   all: innerIframehtml
+// })
+// console.log(innerIframehtmlArr);
+// let iframehtml = (await innerIframehtml.getProperty('innerIframehtml'));
+// console.log(innerIframehtml)
+// const innerIframehtml = await frame.$eval('iframe', (e) => e.outerHTML);
+
+
+
+
+// for (let i = 0; i < innerIframehtml.length; i++){
+  console.log("frames", innerIframehtml);
+  
+  // const elementType = await innerIframehtml[i].evaluate(e => e.tagName);
+  // const type = elementType.toLowerCase();
+  // const innerIframehtml2 = await innerIframehtml[i].evaluate(e => e.parentNode);
+  // const iframeCode = await innerIframehtml2[i].textContent();
+  const type = 'iframe';
+  const iframeCode = 'peop';
+
+  // iframeCode = innerIframehtml[i].outerHTML
+
+  elementDetails.push({
+    type: type,
+    // iframeId: i++,
+    iframeHtmlCode: iframeCode
+  })
+// }
+
+// IFRAME EIND
 
 //   res.send({testExport});
 
 
-// totalArray = linkDetails + imgDetails
+// totalArray = linkDetails + elementDetails
 
-// totalArray = linkDetails.concat(imgDetails).concat(headingDetails).concat(formDetails).concat(tableDetails);
+// totalArray = linkDetails.concat(elementDetails).concat(headingDetails).concat(formDetails).concat(tableDetails);
 
 // // const lll = '{links: {' + ` ${linkDetails} `+ '}}'
 // const lll =  linkDetails 
 // console.log(lll)
 
-const link = (JSON.stringify({linkDetails}));
-const img =  (JSON.stringify({imgDetails}));
-const head = (JSON.stringify({headingDetails}));
-const forms = (JSON.stringify({formDetails}));
-const tbl = (JSON.stringify({tableDetails}));
-console.log(link)
-console.log(img)
-console.log(head)
-console.log(forms)
-console.log(tbl)
+// const link = (JSON.stringify({linkDetails}));
+const img =  (JSON.stringify(elementDetails));
+// const head = (JSON.stringify({headingDetails}));
+// const forms = (JSON.stringify({formDetails}));
+// const tbl = (JSON.stringify({tableDetails}));
+// console.log(link)
+// console.log(img)
+// console.log(head)
+// console.log(forms)
+// console.log(tbl)
 
 // let totalArray = link + img
 let totalArray = img
@@ -266,7 +325,7 @@ let totalArray = img
 // let totalArray = link.concat(img).concat(head).concat(forms).concat(tbl);
 // let totalArray = [...link, ...img, ...head, ...forms, ...tbl];
 
-//  totalArray = [ linkDetails + imgDetails + headingDetails + formDetails + tableDetails ];
+//  totalArray = [ linkDetails + elementDetails + headingDetails + formDetails + tableDetails ];
 //  totalArray =  link + "," + img + "," + head + "," + forms + "," + tbl 
 //  totalArray =  link + "," + img + "," + head;
 
@@ -276,11 +335,19 @@ let totalArray = img
 // totalArray = []
 // totalArray = link.concat(img).concat(head)
 //  totalArray =  [ link + "," + img + "," + head ];
- console.log(totalArray)
-// let totalArraySom = linkDetails + imgDetails + headingDetails + formDetails + tableDetails;
+
+
+
+// DEEES
+//  console.log(totalArray)
+
+
+
+
+// let totalArraySom = linkDetails + elementDetails + headingDetails + formDetails + tableDetails;
 
 // losse arrays met namen per groep DEZE geeft namen in de json:::::::::::::::::::::
-//  totalArray = [linkDetails, imgDetails,  headingDetails, formDetails, tableDetails];
+//  totalArray = [linkDetails, elementDetails,  headingDetails, formDetails, tableDetails];
 
 
 // console.log("TotalArray uit index.js", totalArray)

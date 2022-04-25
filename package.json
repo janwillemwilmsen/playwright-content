@@ -4,14 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind:css": "postcss public/styles/tailwind.css -o public/styles/style.css",
+    "starter": "npm run tailwind:css && nodemon index.js",
+    "start": "index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.4.5",
     "express": "^4.17.3",
     "get-base-url": "^3.0.1",
-    "playwright-chromium": "^1.21.0"
+    "nodemon": "^2.0.15",
+    "playwright-chromium": "^1.21.0",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.24"
   }
 }
