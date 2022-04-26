@@ -22,8 +22,7 @@
         page structure, readable alt texts, and links with meaning.
       </p>
 
-  
-
+ 
 
       <!-- Cloud Run: <a href="https://sitemap-detector-kykti36joa-nw.a.run.app/?url=toertocht.be">get toertocht.be sitemap</a><br> -->
                     <span class="text-sm italic">
@@ -40,10 +39,15 @@
         <div><a class="mx-2 text-sm" href="#images">Images</a></div>
         <div><a class="mx-2 text-sm" href="#forms">Forms</a></div>
         <div><a class="mx-2 text-sm" href="#tables">Tables</a></div>
+        <div><a class="mx-2 text-sm" href="#iframe">Iframes</a></div>
       </div>
     </div>
     <a name="results"></a>
-    <form method="get"  id="my_form"  action="/#results">
+    
+    
+    <!-- <form method="get"  id="my_form"  action="/#results"> -->
+      <form>
+
         <!-- <form method="get"  id="my_form" action="" onsubmit="searchShow(query);"> -->
 
 
@@ -52,22 +56,13 @@
           <div class="flex flex-wrap justify-center">
             <div class="grow-0 shrink-0 flex-basis w-full lg:w-6/12 px-3">
               <div class="md:flex flex-row">
-                <input
-                  type="text"
-                  name="url"
-                  id="url"
-                  placeholder="url"
-                  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                />
-                <input
-                  type="button"
-                  onclick="submit_form()"
-                  value="Go"
-                  data-mdb-ripple="true"
-                  data-mdb-ripple-color="success"
-                  class="inline-block px-6 py-2.5 bg-blue-800 text-gray-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"
-                />
-              </div>
+                  <input type="text" name="url" id="url" nplaceholder="url" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"/>
+                  <!-- <input type="submit" value="Go" data-mdb-ripple="true" data-mdb-ripple-color="success" class="inline-block px-6 py-2.5 bg-blue-800 text-gray-100 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-300 hover:shadow-lg focus:bg-gray-300 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-400 active:shadow-lg transition duration-150 ease-in-out"/> -->
+              
+              
+                  <button type="submit">Submit</button>
+
+                </div>
             </div>
           </div>
         </section>
@@ -115,6 +110,10 @@
 
       <a name="iframe"></a>
       <h3 class="font-medium leading-tight text-2xl mt-8 mb-2 text-blue-600">         Iframe      </h3>
+      <p class="text-sm">Accessibility concerns:
+        People navigating with assistive technology such as a screen reader can use the title attribute on an iframe to label its content. 
+        The title's value should concisely describe the embedded content. Without this title, they have to navigate into the iframe to determine what its embedded content is. 
+        This context shift can be confusing and time-consuming.<br></p>
       <ul id="myDataIframe"></ul>
 
       <pre id="json"></pre>
@@ -154,7 +153,17 @@
 
 
     <script>
+function handleSubmit(event) {
+  event.preventDefault();
 
+  const data = new FormData(event.target);
+
+  const value = data.get('url');
+}
+
+
+const form = document.querySelector('form');
+form.addEventListener('submit', searchShow(url));
 
 
       const spinner = document.getElementById("spinnervideo");
@@ -272,12 +281,17 @@
               return item.type === "table";
             });
 
+            const iframeElements = data.filter(function(item){
+              return item.type === "iframe";
+            })
+
             displayData({
               textElement,
               linkElement,
               imageElement,
               formElement,
               tableElements,
+              iframeElements
             });
             // console.log(data)
 
@@ -384,7 +398,7 @@
 
             for (var i = 0; i < formsNodes.length; i++) {
               const li = document.createElement("li");
-              li.textContent = `html of the form:` + formsNodes[i].formHtmlCode;
+              li.textContent = `<div class="text-md text-blue-500 w-24 inline-block">html of the form:</div>` + formsNodes[i].formHtmlCode;
               formsList.appendChild(li);
             }
           }
@@ -405,10 +419,31 @@
           for (var i = 0; i < tableNodes.length; i++) {
             const li = document.createElement("li");
             li.classList.add('elementItem')
-            li.textContent = `html of the table:` + tableNodes[i].tableHtmlCode;
+            // li.textContent = '<div class="text-md text-blue-500 w-24 inline-block">html of the table</div>' + tableNodes[i].tableHtmlCode;
+            li.textContent = 'html of the table' + tableNodes[i].tableHtmlCode;
             tableList.appendChild(li);
           }
           }
+
+          const iframeList = document.getElementById('myDataIframe');
+          const iframeNodes = data.iframeElements;
+
+          if(iframeNodes.length === 0){
+            const li = document.createElement('li');
+            li.classList.add('elementItem');
+            li.textContent = `No iframes found`
+            iframeList.appendChild(li);
+          }
+    else{
+        for (var i = 0; i < iframeNodes.length; i++){
+          const li = document.createElement('li')
+          li.classList.add('elementItem');
+          li.innerHTML = `<div class="text-md text-blue-500 w-24 inline-block">Iframe url</div>` + iframeNodes[i].iframeSrc + `<br><div class="text-md text-blue-500 w-24 inline-block">title</div>` + iframeNodes[i].iframeTitle
+          iframeList.appendChild(li);
+        }
+      }
+
+
         }
       }
     </script>

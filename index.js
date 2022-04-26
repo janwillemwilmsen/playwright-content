@@ -128,53 +128,105 @@ linkDetails = []
 // (?i)<h([1-6].*?)>(.*?)</h([1-6])>
 
 // const headIngs = await page.$$('h[1-6]>','ig');
+
+const divArray = []
+
+// const divElements = await page.$$("div", {'div:not(:has(*))'});
+const divElements = await page.$$("div");
+
+  for(var i = 0; i < divElements.length; i++){
+     console.log(i)
+  //    const divTxt = await divElements[i].innerHTML();
+  //    console.log(divTxt)
+
+  // page.locator('article', { has: page.locator('button.subscribe') })
+  //        var moreEmptyAs = $('a:not(:has(*))');
+
+    // const myElement = await page.$$("div");
+    // for (var i = 0; i < myElement.children.length; i++) {
+    //   console.log(myElement.children[i].tagName);
+    // }
+
+
+    //  var emptyAs = $i.filter(function () {
+    //   return $(this).children().length == 0;
+    //         });
+    //         console.log(emptyAs)
+
+
+
+//     if(divTxt()){
+//       console.log('Met Childnodes')
+//     }
+// else{
+//   console.log('zonder childnodes')
+// }
+
+  }
+
+// console.log(divArray)
+
+
+
+
+
+
 const headIngs = await page.$$("h1, h2, h3, h4, h5, h6, p");
 // :::::::::::::::::::::
 headingDetails = []
+
 // headingDetails = ["headingDetails"]
 
   for (let i = 0; i < headIngs.length; i++) {
-    const elementType = await headIngs[i].evaluate(e => e.tagName);
-    const typeElement = elementType.toLowerCase();
-    const type = 'textElement'
-    // Query for the next title element on the page
-    // const title = await entries[i].$('td.title > a');
-    // const type = await headIngs[i].tagName;
-    // const typeSort = type('tagName');
 
-    const headingTxt = await headIngs[i].textContent();
-    const headingTxtR = headingTxt.replace(/\s/g,' ').trim()
-    // const type = await headIngs[i].getProperty('tagName').jsonValue();
-     // const type = headingTxtR.tagName;
-
-// if (headIngs[i].tagName ='p') { 
-//     var type = 'paragraaf'
-// }
-// if (headIngs[i].tagName = 'h1')  { 
-//     var type = 'Heading 1'
-// }
-
-
-    // Write the entry to the console
-    // console.log(`${i + 1}: ${await title.innerText()}`);
-    // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
-    // testExport.push(`{alt: ${await title}, src: ${await href}}`)
-    //   let allElements = (`${i + 1}: ${await title} ${await href}`);
-    // headingDetails.('h1234567')
+//     if(headIngs.hasChildNodes()){
+//       console.log('deleted childnodes in index.js')
+//     }
+// else{
+//   }
+  
+  const elementType = await headIngs[i].evaluate(e => e.tagName);
+  const typeElement = elementType.toLowerCase();
+  const type = 'textElement'
+  // Query for the next title element on the page
+  // const title = await entries[i].$('td.title > a');
+  // const type = await headIngs[i].tagName;
+  // const typeSort = type('tagName');
+  
+  const headingTxt = await headIngs[i].textContent();
+  const headingTxtR = headingTxt.replace(/\s/g,' ').trim()
+  // const type = await headIngs[i].getProperty('tagName').jsonValue();
+  // const type = headingTxtR.tagName;
+  
+  // if (headIngs[i].tagName ='p') { 
+    //     var type = 'paragraaf'
+    // }
+    // if (headIngs[i].tagName = 'h1')  { 
+      //     var type = 'Heading 1'
+      // }
+      
+      
+      // Write the entry to the console
+      // console.log(`${i + 1}: ${await title.innerText()}`);
+      // testExport.push(`${i + 1} {alt: ${await title}} {src: ${await href}}`)
+      // testExport.push(`{alt: ${await title}, src: ${await href}}`)
+      //   let allElements = (`${i + 1}: ${await title} ${await href}`);
+      // headingDetails.('h1234567')
+      
+      // console.log(`${i + 1}: ${await headingTxtR} `);
+      elementDetails.push(
+        {
+          type: type,
+          element: typeElement,
+          headingId: i,
+          headingTxt: headingTxtR,
+          // linkUrl: href
+        });
+        
+        
     
-    // console.log(`${i + 1}: ${await headingTxtR} `);
-    elementDetails.push(
-              {
-                type: type,
-                element: typeElement,
-                headingId: i,
-                headingTxt: headingTxtR,
-                // linkUrl: href
-              });
-
-
-
-  }
+        
+      }
  // END HEADINGS
 
 // FORMS START
@@ -237,9 +289,15 @@ tableDetails = []
 
 // let innerIframehtmlArr = []
 
-// let innerIframehtmlOuter = await page.$$('iframe');
+let innerIframehtml = await page.$$('iframe');
+// console.dir(elementHandle.getAttribute(name))
 
-let innerIframehtml = page.frames().map((f) => f.url())
+// let innerIframehtml = page.frames().map((f) => f.url())
+
+
+// innerIframehtmlOuter.$$eval(node => node.getAttribute('src'));
+
+
 // const backToNumbers = JSON.parse(innerIframehtml)
 // console.log(backToNumbers)
 // let innerIframehtml = await feedHandle.$$eval('.tweet', nodes => nodes.map(n => n.innerText)).toEqual(['Hello!', 'Hi!']);
@@ -247,9 +305,6 @@ let innerIframehtml = page.frames().map((f) => f.url())
 
 // let innerIframehtml2 = page.frames().map((nodes) => nodes.getAttribute(src))
 // console.log("frames", innerIframehtml2);
-
-
-
 
 // const frameElement = await frame.frameElement();
 // const contentFrame = await frameElement.contentFrame();
@@ -273,24 +328,28 @@ let innerIframehtml = page.frames().map((f) => f.url())
 
 
 
-// for (let i = 0; i < innerIframehtml.length; i++){
-  console.log("frames", innerIframehtml);
-  
-  // const elementType = await innerIframehtml[i].evaluate(e => e.tagName);
-  // const type = elementType.toLowerCase();
+for (let i = 0; i < innerIframehtml.length; i++){
+  // console.log("frames", innerIframehtml);
+ 
+  const elementType = await innerIframehtml[i].evaluate(e => e.tagName);
+  const type = elementType.toLowerCase();
   // const innerIframehtml2 = await innerIframehtml[i].evaluate(e => e.parentNode);
-  // const iframeCode = await innerIframehtml2[i].textContent();
-  const type = 'iframe';
-  const iframeCode = 'peop';
+  
+  const iframeSrc = await innerIframehtml[i].getAttribute('src');
+  const iframeTitle = await innerIframehtml[i].getAttribute('title');
+
+  // const type = 'iframe';
+  // const iframeCode = 'peopie';
 
   // iframeCode = innerIframehtml[i].outerHTML
 
   elementDetails.push({
     type: type,
     // iframeId: i++,
-    iframeHtmlCode: iframeCode
+    iframeTitle: iframeTitle,
+    iframeSrc: iframeSrc
   })
-// }
+}
 
 // IFRAME EIND
 
