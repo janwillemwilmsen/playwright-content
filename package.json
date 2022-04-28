@@ -20,5 +20,8 @@
     "playwright-chromium": "^1.21.0",
     "postcss-cli": "^9.1.0",
     "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2"
   }
 }

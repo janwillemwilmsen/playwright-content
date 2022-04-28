@@ -171,7 +171,8 @@ const divElements = await page.$$("div");
 
 
 
-const headIngs = await page.$$("h1, h2, h3, h4, h5, h6, p");
+// const headIngs = await page.$$("h1, h2, h3, h4, h5, h6, p");
+const headIngs = await page.$$("h1, h2, h3, h4, h5, h6");
 // :::::::::::::::::::::
 headingDetails = []
 
@@ -350,8 +351,38 @@ for (let i = 0; i < innerIframehtml.length; i++){
     iframeSrc: iframeSrc
   })
 }
-
 // IFRAME EIND
+// Accessibility tree START
+const snapshot = await page.accessibility.snapshot();
+console.log(snapshot);
+elementDetails.push(snapshot)
+// Accessibility tree EIND
+
+
+// Signposts/Landmarks START
+
+
+ 
+const landlist = await page.$$("header, nav, main, article, aside, footer");
+
+  for (var i = 0; i < landlist.length; i++){
+    const elementType = await landlist[i].evaluate(e => e.tagName);
+    const type = elementType.toLowerCase()
+    const landmarkelement = 'signpostLandmark'
+    const landmarkHtml = await landlist[i].innerText();
+    elementDetails.push({
+      type: landmarkelement,
+      landmarkelement: type,
+      landmarkhtml: landmarkHtml
+    }) 
+
+  }
+
+
+
+// Signposts/Landmarks EIND
+
+
 
 //   res.send({testExport});
 

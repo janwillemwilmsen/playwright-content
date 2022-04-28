@@ -1,964 +1,1423 @@
-{
-	"imgDetails": [
-		{
-			"type": "H3",
-			"headingId": 0,
-			"headingTxt": "Energie besparen doe je met isolatie via Essent"
-		},
-		{
-			"type": "P",
-			"headingId": 1,
-			"headingTxt": "Wil je juist nu besparen op energie? Isoleer dan je woning! Zo verlaag je de energierekening. Wat bespaar jij?"
-		},
-		{
-			"type": "P",
-			"headingId": 2,
-			"headingTxt": "Bereken mijn besparing"
-		},
-		{
-			"type": "IMG",
-			"imgId": 0,
-			"alt": "Energieleverancier Essent",
-			"src": "https://static.essent.nl/online/img/logo-essent.png"
-		},
-		{
-			"type": "P",
-			"headingId": 3,
-			"headingTxt": "Meer over isolatie"
-		},
-		{
-			"type": "IMG",
-			"imgId": 1,
-			"alt": "Informatie",
-			"src": "https://www.essent.nl/content/Images/230524_energieprijzen-info.png"
-		},
-		{
-			"type": "H2",
-			"headingId": 4,
-			"headingTxt": "Dit heeft Essent ook voor jou"
-		},
-		{
-			"type": "P",
-			"headingId": 5,
-			"headingTxt": "Bij Essent zit je goed met een scherp energiecontract en belonen we je als vaste klant met Thuisvoordeel.  Maar wist je dat we ook je huis energiezuiniger maken, met zonnepanelen of isolatie bijvoorbeeld?  Dat regelen onze servicepartners, en er zit er altijd eentje bij jou in de buurt."
-		},
-		{
-			"type": "IMG",
-			"imgId": 2,
-			"alt": "test",
-			"src": "https://essent.nl/content/Images/217488_HUB_SenG_Index.jpg"
-		},
-		{
-			"type": "P",
-			"headingId": 6,
-			"headingTxt": ""
-		},
-		{
-			"type": "H3",
-			"headingId": 7,
-			"headingTxt": "Stroom & Gas"
-		},
-		{
-			"type": "IMG",
-			"imgId": 3,
-			"alt": "test",
-			"src": "https://essent.nl/content/Images/217650_HUB_Energieproducten_Index.jpg"
-		},
-		{
-			"type": "H3",
-			"headingId": 8,
-			"headingTxt": "Energieproducten"
-		},
-		{
-			"type": "IMG",
-			"imgId": 4,
-			"alt": "test",
-			"src": "https://essent.nl/content/Images/217651_HUB_Speciaal-voor-Klanten_Index.jpg"
-		},
-		{
-			"type": "H3",
-			"headingId": 9,
-			"headingTxt": "Speciaal voor klanten"
-		},
-		{
-			"type": "P",
-			"headingId": 10,
-			"headingTxt": "Onze klanten beoordelen ons met een 8,1"
-		},
-		{
-			"type": "IMG",
-			"imgId": 5,
-			"alt": null,
-			"src": "https://essent.nl/content/Images/217267_KlantenVertellenLogo.png"
-		},
-		{
-			"type": "H2",
-			"headingId": 11,
-			"headingTxt": "Vandaag geregeld"
-		},
-		{
-			"type": "H4",
-			"headingId": 12,
-			"headingTxt": "Stroom en Gas"
-		},
-		{
-			"type": "IMG",
-			"imgId": 6,
-			"alt": "9a. image: s en g acties",
-			"src": "https://essent.nl/content/Images/195608_2.png"
-		},
-		{
-			"type": "P",
-			"headingId": 13,
-			"headingTxt": "Voor stroom en gas ben je bij ons aan het goede adres. Vul je postcode en huisnummer in de postcodecheck in en je ziet direct ons aanbod."
-		},
-		{
-			"type": "IMG",
-			"imgId": 7,
-			"alt": "9a. image: energietarieven",
-			"src": "https://essent.nl/content/Images/195607_1.png"
-		},
-		{
-			"type": "P",
-			"headingId": 14,
-			"headingTxt": "Bekijk Stroom en Gas aanbod"
-		},
-		{
-			"type": "P",
-			"headingId": 15,
-			"headingTxt": ""
-		},
-		{
-			"type": "IMG",
-			"imgId": 8,
-			"alt": "Image item - Verblijfsfunctie",
-			"src": "https://essent.nl/content/Images/202624_Verblijsfunctie.png"
-		},
-		{
-			"type": "H4",
-			"headingId": 16,
-			"headingTxt": "Energietarieven"
-		},
-		{
-			"type": "P",
-			"headingId": 17,
-			"headingTxt": "Met de postcodecheck zie je snel en eenvoudig hoe onze energietarieven in jouw situatie uitpakken. Natuurlijk krijg je als nieuwe klant groene stroom bij Essent."
-		},
-		{
-			"type": "IMG",
-			"imgId": 9,
-			"alt": "Energieleverancier Essent",
-			"src": "https://static.essent.nl/online/img/logo-essent_white.svg"
-		},
-		{
-			"type": "P",
-			"headingId": 18,
-			"headingTxt": "Lees meer over onze energietarieven"
-		},
-		{
-			"type": "IMG",
-			"imgId": 10,
-			"alt": null,
-			"src": "https://static.essent.nl/online/img/essent-logo-bottom-right-small.png"
-		},
-		{
-			"type": "P",
-			"headingId": 19,
-			"headingTxt": ""
-		},
-		{
-			"type": "H4",
-			"headingId": 20,
-			"headingTxt": "Verhuizen"
-		},
-		{
-			"type": "IMG",
-			"imgId": 11,
-			"alt": null,
-			"src": "https://static.essent.nl/online/img/essent-logo-bottom-right-small.png"
-		},
-		{
-			"type": "P",
-			"headingId": 21,
-			"headingTxt": "Bij een verhuizing komt een hoop kijken. Ook het regelen van je energiezaken hoort hierbij. Ga je verhuizen en ben je op zoek naar een energieleverancier? Bekijk dan ons aanbod."
-		},
-		{
-			"type": "P",
-			"headingId": 22,
-			"headingTxt": "Lees meer over verhuizen en energie"
-		},
-		{
-			"type": "H1",
-			"headingId": 23,
-			"headingTxt": "Energieleverancier Essent"
-		},
-		{
-			"type": "P",
-			"headingId": 24,
-			"headingTxt": "Als energieleverancier helpen we ruim 2,5 miljoen klanten aan energie in de particuliere en zakelijke markt. We helpen je graag om duurzamer te leven én te besparen. Daar hoort vandaag de dag ook groene stroom bij. Daar hoort vandaag de dag ook groene stroom bij. Opgewekt met windmolens en zonnepanelen en steeds meer van Nederlandse bodem."
-		},
-		{
-			"type": "P",
-			"headingId": 25,
-			"headingTxt": "Bij Essent kies je uit een aantal standaard stroom- en gasproducten. Welk contract je ook kiest, bij ons zit je goed. Weten wat je bij het huidige tarief per maand gaat betalen? Vul de postcodecheck in en je weet het binnen 1 minuut."
-		},
-		{
-			"type": "H3",
-			"headingId": 26,
-			"headingTxt": "Meer dan alleen een energieleverancier"
-		},
-		{
-			"type": "P",
-			"headingId": 27,
-			"headingTxt": "Essent wil klanten helpen hun huis of zaak comfortabel én energiezuinig te maken. Wij bieden als energiemaatschappij daarom ook andere slimme, energiegerelateerde producten aan. Bijvoorbeeld zonnepanelen om energie te besparen met je eigen dak, verwarming, of isolatie voor een energiezuinige woning. Deze producten worden geleverd door onze servicepartners, van installatie tot en met onderhoud."
-		},
-		{
-			"type": "H4",
-			"headingId": 28,
-			"headingTxt": "Volg Essent hier"
-		},
-		{
-			"type": "H4",
-			"headingId": 29,
-			"headingTxt": "Particulier"
-		},
-		{
-			"type": "H4",
-			"headingId": 30,
-			"headingTxt": "Zakelijk"
-		},
-		{
-			"type": "H4",
-			"headingId": 31,
-			"headingTxt": "Over Essent"
-		},
-		{
-			"type": "H3",
-			"headingId": 32,
-			"headingTxt": "Energie van vandaag"
-		},
-		{
-			"type": "P",
-			"headingId": 33,
-			"headingTxt": "©Essent 2022"
-		},
-		{
-			"type": "H2",
-			"headingId": 34,
-			"headingTxt": "Om je zo goed mogelijk van dienst te zijn, gebruiken wij cookies."
-		},
-		{
-			"type": "P",
-			"headingId": 35,
-			"headingTxt": "We maken onderscheid tussen noodzakelijke, relevante en externe cookies.         Onze noodzakelijke cookies zorgen ervoor dat de websites goed werken en         gebruiken we voor analytische doeleinden. De relevante en externe         cookies helpen ons om onze websites, apps, e-mails en online         advertenties voor jou relevanter te maken. Daarnaast zorgen externe         cookies ervoor dat je pagina's kunt delen via social media en je         relevante advertenties te zien krijgt op andere websites."
-		},
-		{
-			"type": "A",
-			"linkId": 0,
-			"linkTxt": "",
-			"linkUrl": "/content/particulier/index.html"
-		},
-		{
-			"type": "P",
-			"headingId": 36,
-			"headingTxt": "Door op 'Ja, ik accepteer cookies' te drukken, geef je aan dat je         akkoord bent met het gebruik van cookies en de verzameling van         informatie op de         websites van           E.ON groep. Meer weten? In onze         privacyverklaring         lees je meer over ons privacybeleid. Bij         instellingen         lees je meer over cookies en past je jouw cookievoorkeuren aan."
-		},
-		{
-			"type": "P",
-			"headingId": 37,
-			"headingTxt": "Deze website maakt gebruik van noodzakelijke cookies, die nodig zijn om         deze site zo goed mogelijk te laten werken. Hieronder kunt u aangeven         welke cookies u wilt accepteren."
-		},
-		{
-			"type": "A",
-			"linkId": 1,
-			"linkTxt": "Inloggen Mijn Essent",
-			"linkUrl": "https://mijn.essent.nl/"
-		},
-		{
-			"type": "P",
-			"headingId": 38,
-			"headingTxt": "Deze instellingen slaan we op in een cookie. Verwijdert u uw cookies           uit uw browser, dan kunnen we uw keuze niet meer herkennen en           informeren we u opnieuw over het gebruik van cookies en vragen we om           uw toestemming."
-		},
-		{
-			"type": "A",
-			"linkId": 2,
-			"linkTxt": "Particulier",
-			"linkUrl": "/content/particulier/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 3,
-			"linkTxt": "Zzp",
-			"linkUrl": "/content/zzp/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 4,
-			"linkTxt": "Zakelijk",
-			"linkUrl": "/content/zakelijk/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 5,
-			"linkTxt": "Grootzakelijk",
-			"linkUrl": "/content/grootzakelijk/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 6,
-			"linkTxt": "Home",
-			"linkUrl": "/"
-		},
-		{
-			"type": "A",
-			"linkId": 7,
-			"linkTxt": "Stroom & Gas",
-			"linkUrl": "/content/particulier/producten/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 8,
-			"linkTxt": "Energieproducten",
-			"linkUrl": "/content/particulier/energie-besparen/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 9,
-			"linkTxt": "Speciaal voor Klanten",
-			"linkUrl": "/content/particulier/speciaal_voor_klanten/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 10,
-			"linkTxt": "Klantenservice",
-			"linkUrl": "/content/particulier/klantenservice/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 11,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 12,
-			"linkTxt": "Bekijk de informatie",
-			"linkUrl": "/content/particulier/producten/stroom_gas/stijgende-energieprijzen.html"
-		},
-		{
-			"type": "A",
-			"linkId": 13,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 14,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 15,
-			"linkTxt": "Bereken mijn besparing",
-			"linkUrl": "/content/particulier/energie-besparen/isolatie/index.html?icmp=isolatie-campagne:44869:button-berekenmijnbesparing:"
-		},
-		{
-			"type": "A",
-			"linkId": 16,
-			"linkTxt": "Meer over isolatie",
-			"linkUrl": "/content/particulier/energie-besparen/isolatie/index.html?icmp=isolatie-campagne:44869:link-meeroverisolatie:"
-		},
-		{
-			"type": "A",
-			"linkId": 17,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 18,
-			"linkTxt": "Vergelijk onze energieaanbiedingen",
-			"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 19,
-			"linkTxt": "Overstappen naar Essent",
-			"linkUrl": "/content/particulier/producten/stroom_gas/overstappen-energieleverancier.html"
-		},
-		{
-			"type": "A",
-			"linkId": 20,
-			"linkTxt": "Snel klant worden",
-			"linkUrl": "/content/particulier/producten/klant_worden/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 21,
-			"linkTxt": "Stroom & Gas tarieven",
-			"linkUrl": "/content/particulier/producten/alle_energietarieven/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 22,
-			"linkTxt": "Zonnepanelen",
-			"linkUrl": "/content/particulier/energie-besparen/zonnepanelen/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 23,
-			"linkTxt": "Isolatie",
-			"linkUrl": "/content/particulier/energie-besparen/isolatie/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 24,
-			"linkTxt": "Gratis online huisscan",
-			"linkUrl": "/content/particulier/energie-besparen/plusjehuis/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 25,
-			"linkTxt": "Cv-ketel onderhoud",
-			"linkUrl": "/content/particulier/energie-besparen/verwarmingsinstallaties/service-en-onderhoud/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 26,
-			"linkTxt": "Klantprogramma Thuisvoordeel",
-			"linkUrl": "/content/particulier/speciaal_voor_klanten/thuisvoordeel/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 27,
-			"linkTxt": "Verbruiksmanager+ app",
-			"linkUrl": "/content/particulier/speciaal_voor_klanten/verbruiksmanager/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 28,
-			"linkTxt": "Mijn Essent",
-			"linkUrl": "https://mijn.essent.nl/selectie"
-		},
-		{
-			"type": "A",
-			"linkId": 29,
-			"linkTxt": "Klantenservice",
-			"linkUrl": "/content/particulier/klantenservice/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 30,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 31,
-			"linkTxt": "",
-			"linkUrl": "/content/particulier/producten/stroom_gas/essent-reviews.html"
-		},
-		{
-			"type": "A",
-			"linkId": 32,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 33,
-			"linkTxt": "Meterstanden doorgeven",
-			"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/meterstand_doorgeven/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 34,
-			"linkTxt": "Mijn verbruik inzien",
-			"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/mijn_essent/inloggen/index.html?gfwizard=verbruiksManager"
-		},
-		{
-			"type": "A",
-			"linkId": 35,
-			"linkTxt": "Termijnbedrag wijzigen",
-			"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/facturen_en_betalen/termijnbedrag/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 36,
-			"linkTxt": "Facturen bekijken",
-			"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/mijn_essent/inloggen/index.html?gftab=jaarafrekening&title=Log%20in%20om%20uw%20jaarafrekening%20te%20bekijken"
-		},
-		{
-			"type": "A",
-			"linkId": 37,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 38,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 39,
-			"linkTxt": "Bekijk Stroom en Gas aanbod",
-			"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 40,
-			"linkTxt": "Lees meer over onze energietarieven",
-			"linkUrl": "/content/particulier/producten/alle_energietarieven/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 41,
-			"linkTxt": "Lees meer over verhuizen en energie",
-			"linkUrl": "/content/particulier/producten/stroom_gas/energie-verhuizen.html"
-		},
-		{
-			"type": "A",
-			"linkId": 42,
-			"linkTxt": "",
-			"linkUrl": "/#"
-		},
-		{
-			"type": "A",
-			"linkId": 43,
-			"linkTxt": "groene stroom",
-			"linkUrl": "https://www.essent.nl/content/particulier/producten/stroom_gas/groene-stroom.html"
-		},
-		{
-			"type": "A",
-			"linkId": 44,
-			"linkTxt": "stroom- en gasproducten",
-			"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 45,
-			"linkTxt": "zonnepanelen",
-			"linkUrl": "/content/particulier/energie-besparen/zonnepanelen/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 46,
-			"linkTxt": "verwarming",
-			"linkUrl": "https://www.essent.nl/content/particulier/energie-besparen/verwarmingsinstallaties/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 47,
-			"linkTxt": "isolatie",
-			"linkUrl": "https://www.essent.nl/content/particulier/energie-besparen/isolatie/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 48,
-			"linkTxt": "",
-			"linkUrl": "https://facebook.com/Essent"
-		},
-		{
-			"type": "A",
-			"linkId": 49,
-			"linkTxt": "",
-			"linkUrl": "https://twitter.com/essent"
-		},
-		{
-			"type": "A",
-			"linkId": 50,
-			"linkTxt": "",
-			"linkUrl": "https://www.youtube.com/essentnl"
-		},
-		{
-			"type": "A",
-			"linkId": 51,
-			"linkTxt": "",
-			"linkUrl": "https://www.linkedin.com/company/essent"
-		},
-		{
-			"type": "A",
-			"linkId": 52,
-			"linkTxt": "",
-			"linkUrl": "https://www.flickr.com/photos/essentnl"
-		},
-		{
-			"type": "A",
-			"linkId": 53,
-			"linkTxt": "Kennisbank",
-			"linkUrl": "/kennisbank"
-		},
-		{
-			"type": "A",
-			"linkId": 54,
-			"linkTxt": "Particulier",
-			"linkUrl": "/content/particulier/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 55,
-			"linkTxt": "Stroom en gas",
-			"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 56,
-			"linkTxt": "Zonnepanelen",
-			"linkUrl": "/content/particulier/producten/zonne_energie/zonnepanelen/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 57,
-			"linkTxt": "Cv-ketels",
-			"linkUrl": "/content/particulier/producten/verwarmingsinstallaties/cv-ketels/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 58,
-			"linkTxt": "Klantenservice",
-			"linkUrl": "/content/particulier/klantenservice/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 59,
-			"linkTxt": "Zakelijk",
-			"linkUrl": "/content/zakelijk/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 60,
-			"linkTxt": "Zakelijke energie",
-			"linkUrl": "/content/zakelijk/producten/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 61,
-			"linkTxt": "Energie besparen",
-			"linkUrl": "/content/zakelijk/energie-besparen/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 62,
-			"linkTxt": "Offerte aanvragen",
-			"linkUrl": "/content/zakelijk/offerte_aanvragen/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 63,
-			"linkTxt": "Klantenservice",
-			"linkUrl": "/content/zakelijk/ondernemersdesk/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 64,
-			"linkTxt": "Over Essent",
-			"linkUrl": "/content/overessent/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 65,
-			"linkTxt": "Energietransitie",
-			"linkUrl": "/content/overessent/energietransitie/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 66,
-			"linkTxt": "Nieuws en media",
-			"linkUrl": "/content/overessent/actueel/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 67,
-			"linkTxt": "Contact",
-			"linkUrl": "/content/overessent/contactmetessent/index.html"
-		},
-		{
-			"type": "A",
-			"linkId": 68,
-			"linkTxt": "Bij ons werken",
-			"linkUrl": "https://www.werkenbijessent.nl/"
-		},
-		{
-			"type": "A",
-			"linkId": 69,
-			"linkTxt": "Privacy",
-			"linkUrl": "/privacy"
-		},
-		{
-			"type": "A",
-			"linkId": 70,
-			"linkTxt": "Voorwaarden",
-			"linkUrl": "/content/sitevoorwaarden/algemene_voorwaarden.html"
-		},
-		{
-			"type": "A",
-			"linkId": 71,
-			"linkTxt": "Kennisbank",
-			"linkUrl": "/kennisbank"
-		},
-		{
-			"type": "A",
-			"linkId": 72,
-			"linkTxt": "Informatie voor toeleveranciers en inkoopvoorwaarden",
-			"linkUrl": "https://www.essent.nl/content/sitevoorwaarden/algemene_inkoopvoorwaarden.html"
-		},
-		{
-			"type": "A",
-			"linkId": 73,
-			"linkTxt": "Whistleblowing E.ON",
-			"linkUrl": "https://eon-wb.compliancesolutions.com/"
-		},
-		{
-			"type": "A",
-			"linkId": 74,
-			"linkTxt": "E.ON groep",
-			"linkUrl": "https://www.essent.nl/content/sitevoorwaarden/overzicht-websites.html"
-		},
-		{
-			"type": "A",
-			"linkId": 75,
-			"linkTxt": "privacyverklaring",
-			"linkUrl": "https://www.essent.nl/content/sitevoorwaarden/privacyverklaring.html"
-		},
-		{
-			"type": "A",
-			"linkId": 76,
-			"linkTxt": "instellingen",
-			"linkUrl": "#"
-		},
-		{
-			"type": "A",
-			"linkId": 77,
-			"linkTxt": "Ja, ik accepteer cookies",
-			"linkUrl": "#"
-		},
-		{
-			"type": "A",
-			"linkId": 78,
-			"linkTxt": "Instellingen",
-			"linkUrl": "#"
-		},
-		{
-			"type": "A",
-			"linkId": 79,
-			"linkTxt": "",
-			"linkUrl": "#"
-		},
-		{
-			"type": "A",
-			"linkId": 80,
-			"linkTxt": "Akkoord",
-			"linkUrl": "#"
-		},
-		{
-			"type": "A",
-			"linkId": 81,
-			"linkTxt": "Akkoord",
-			"linkUrl": "#"
-		},
-		{
-			"type": "A",
-			"linkId": 82,
-			"linkTxt": "Akkoord",
-			"linkUrl": "#"
-		},
-		{
-			"type": "H3",
-			"headingId": 0,
-			"headingTxt": "Energie besparen doe je met isolatie via Essent"
-		},
-		{
-			"type": "P",
-			"headingId": 1,
-			"headingTxt": "Wil je juist nu besparen op energie? Isoleer dan je woning! Zo verlaag je de energierekening. Wat bespaar jij?"
-		},
-		{
-			"type": "P",
-			"headingId": 2,
-			"headingTxt": "Bereken mijn besparing"
-		},
-		{
-			"type": "P",
-			"headingId": 3,
-			"headingTxt": "Meer over isolatie"
-		},
-		{
-			"type": "H2",
-			"headingId": 4,
-			"headingTxt": "Dit heeft Essent ook voor jou"
-		},
-		{
-			"type": "P",
-			"headingId": 5,
-			"headingTxt": "Bij Essent zit je goed met een scherp energiecontract en belonen we je als vaste klant met Thuisvoordeel.  Maar wist je dat we ook je huis energiezuiniger maken, met zonnepanelen of isolatie bijvoorbeeld?  Dat regelen onze servicepartners, en er zit er altijd eentje bij jou in de buurt."
-		},
-		{
-			"type": "P",
-			"headingId": 6,
-			"headingTxt": ""
-		},
-		{
-			"type": "H3",
-			"headingId": 7,
-			"headingTxt": "Stroom & Gas"
-		},
-		{
-			"type": "H3",
-			"headingId": 8,
-			"headingTxt": "Energieproducten"
-		},
-		{
-			"type": "H3",
-			"headingId": 9,
-			"headingTxt": "Speciaal voor klanten"
-		},
-		{
-			"type": "P",
-			"headingId": 10,
-			"headingTxt": "Onze klanten beoordelen ons met een 8,1"
-		},
-		{
-			"type": "H2",
-			"headingId": 11,
-			"headingTxt": "Vandaag geregeld"
-		},
-		{
-			"type": "H4",
-			"headingId": 12,
-			"headingTxt": "Stroom en Gas"
-		},
-		{
-			"type": "P",
-			"headingId": 13,
-			"headingTxt": "Voor stroom en gas ben je bij ons aan het goede adres. Vul je postcode en huisnummer in de postcodecheck in en je ziet direct ons aanbod."
-		},
-		{
-			"type": "P",
-			"headingId": 14,
-			"headingTxt": "Bekijk Stroom en Gas aanbod"
-		},
-		{
-			"type": "P",
-			"headingId": 15,
-			"headingTxt": ""
-		},
-		{
-			"type": "H4",
-			"headingId": 16,
-			"headingTxt": "Energietarieven"
-		},
-		{
-			"type": "P",
-			"headingId": 17,
-			"headingTxt": "Met de postcodecheck zie je snel en eenvoudig hoe onze energietarieven in jouw situatie uitpakken. Natuurlijk krijg je als nieuwe klant groene stroom bij Essent."
-		},
-		{
-			"type": "P",
-			"headingId": 18,
-			"headingTxt": "Lees meer over onze energietarieven"
-		},
-		{
-			"type": "P",
-			"headingId": 19,
-			"headingTxt": ""
-		},
-		{
-			"type": "H4",
-			"headingId": 20,
-			"headingTxt": "Verhuizen"
-		},
-		{
-			"type": "P",
-			"headingId": 21,
-			"headingTxt": "Bij een verhuizing komt een hoop kijken. Ook het regelen van je energiezaken hoort hierbij. Ga je verhuizen en ben je op zoek naar een energieleverancier? Bekijk dan ons aanbod."
-		},
-		{
-			"type": "P",
-			"headingId": 22,
-			"headingTxt": "Lees meer over verhuizen en energie"
-		},
-		{
-			"type": "H1",
-			"headingId": 23,
-			"headingTxt": "Energieleverancier Essent"
-		},
-		{
-			"type": "P",
-			"headingId": 24,
-			"headingTxt": "Als energieleverancier helpen we ruim 2,5 miljoen klanten aan energie in de particuliere en zakelijke markt. We helpen je graag om duurzamer te leven én te besparen. Daar hoort vandaag de dag ook groene stroom bij. Daar hoort vandaag de dag ook groene stroom bij. Opgewekt met windmolens en zonnepanelen en steeds meer van Nederlandse bodem."
-		},
-		{
-			"type": "P",
-			"headingId": 25,
-			"headingTxt": "Bij Essent kies je uit een aantal standaard stroom- en gasproducten. Welk contract je ook kiest, bij ons zit je goed. Weten wat je bij het huidige tarief per maand gaat betalen? Vul de postcodecheck in en je weet het binnen 1 minuut."
-		},
-		{
-			"type": "H3",
-			"headingId": 26,
-			"headingTxt": "Meer dan alleen een energieleverancier"
-		},
-		{
-			"type": "P",
-			"headingId": 27,
-			"headingTxt": "Essent wil klanten helpen hun huis of zaak comfortabel én energiezuinig te maken. Wij bieden als energiemaatschappij daarom ook andere slimme, energiegerelateerde producten aan. Bijvoorbeeld zonnepanelen om energie te besparen met je eigen dak, verwarming, of isolatie voor een energiezuinige woning. Deze producten worden geleverd door onze servicepartners, van installatie tot en met onderhoud."
-		},
-		{
-			"type": "H4",
-			"headingId": 28,
-			"headingTxt": "Volg Essent hier"
-		},
-		{
-			"type": "H4",
-			"headingId": 29,
-			"headingTxt": "Particulier"
-		},
-		{
-			"type": "H4",
-			"headingId": 30,
-			"headingTxt": "Zakelijk"
-		},
-		{
-			"type": "H4",
-			"headingId": 31,
-			"headingTxt": "Over Essent"
-		},
-		{
-			"type": "H3",
-			"headingId": 32,
-			"headingTxt": "Energie van vandaag"
-		},
-		{
-			"type": "P",
-			"headingId": 33,
-			"headingTxt": "©Essent 2022"
-		},
-		{
-			"type": "H2",
-			"headingId": 34,
-			"headingTxt": "Om je zo goed mogelijk van dienst te zijn, gebruiken wij cookies."
-		},
-		{
-			"type": "P",
-			"headingId": 35,
-			"headingTxt": "We maken onderscheid tussen noodzakelijke, relevante en externe cookies.         Onze noodzakelijke cookies zorgen ervoor dat de websites goed werken en         gebruiken we voor analytische doeleinden. De relevante en externe         cookies helpen ons om onze websites, apps, e-mails en online         advertenties voor jou relevanter te maken. Daarnaast zorgen externe         cookies ervoor dat je pagina's kunt delen via social media en je         relevante advertenties te zien krijgt op andere websites."
-		},
-		{
-			"type": "P",
-			"headingId": 36,
-			"headingTxt": "Door op 'Ja, ik accepteer cookies' te drukken, geef je aan dat je         akkoord bent met het gebruik van cookies en de verzameling van         informatie op de         websites van           E.ON groep. Meer weten? In onze         privacyverklaring         lees je meer over ons privacybeleid. Bij         instellingen         lees je meer over cookies en past je jouw cookievoorkeuren aan."
-		},
-		{
-			"type": "P",
-			"headingId": 37,
-			"headingTxt": "Deze website maakt gebruik van noodzakelijke cookies, die nodig zijn om         deze site zo goed mogelijk te laten werken. Hieronder kunt u aangeven         welke cookies u wilt accepteren."
-		},
-		{
-			"type": "P",
-			"headingId": 38,
-			"headingTxt": "Deze instellingen slaan we op in een cookie. Verwijdert u uw cookies           uit uw browser, dan kunnen we uw keuze niet meer herkennen en           informeren we u opnieuw over het gebruik van cookies en vragen we om           uw toestemming."
-		}
-	]
-}
+[
+	{
+		"type": "img",
+		"imgId": 0,
+		"alt": "Energieleverancier Essent",
+		"src": "https://static.essent.nl/online/img/logo-essent.png"
+	},
+	{
+		"type": "img",
+		"imgId": 1,
+		"alt": "Informatie",
+		"src": "https://www.essent.nl/content/Images/230524_energieprijzen-info.png"
+	},
+	{
+		"type": "img",
+		"imgId": 2,
+		"alt": "test",
+		"src": "https://essent.nl/content/Images/217488_HUB_SenG_Index.jpg"
+	},
+	{
+		"type": "img",
+		"imgId": 3,
+		"alt": "test",
+		"src": "https://essent.nl/content/Images/217650_HUB_Energieproducten_Index.jpg"
+	},
+	{
+		"type": "img",
+		"imgId": 4,
+		"alt": "test",
+		"src": "https://essent.nl/content/Images/217651_HUB_Speciaal-voor-Klanten_Index.jpg"
+	},
+	{
+		"type": "img",
+		"imgId": 5,
+		"alt": null,
+		"src": "https://essent.nl/content/Images/217267_KlantenVertellenLogo.png"
+	},
+	{
+		"type": "img",
+		"imgId": 6,
+		"alt": "9a. image: s en g acties",
+		"src": "https://essent.nl/content/Images/195608_2.png"
+	},
+	{
+		"type": "img",
+		"imgId": 7,
+		"alt": "9a. image: energietarieven",
+		"src": "https://essent.nl/content/Images/195607_1.png"
+	},
+	{
+		"type": "img",
+		"imgId": 8,
+		"alt": "Image item - Verblijfsfunctie",
+		"src": "https://essent.nl/content/Images/202624_Verblijsfunctie.png"
+	},
+	{
+		"type": "img",
+		"imgId": 9,
+		"alt": "Energieleverancier Essent",
+		"src": "https://static.essent.nl/online/img/logo-essent_white.svg"
+	},
+	{
+		"type": "img",
+		"imgId": 10,
+		"alt": null,
+		"src": "https://static.essent.nl/online/img/essent-logo-bottom-right-small.png"
+	},
+	{
+		"type": "img",
+		"imgId": 11,
+		"alt": null,
+		"src": "https://static.essent.nl/online/img/essent-logo-bottom-right-small.png"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 0,
+		"linkTxt": "",
+		"linkUrl": "/content/particulier/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 1,
+		"linkTxt": "Inloggen Mijn Essent",
+		"linkUrl": "https://mijn.essent.nl/"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 2,
+		"linkTxt": "Particulier",
+		"linkUrl": "/content/particulier/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 3,
+		"linkTxt": "Zzp",
+		"linkUrl": "/content/zzp/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 4,
+		"linkTxt": "Zakelijk",
+		"linkUrl": "/content/zakelijk/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 5,
+		"linkTxt": "Grootzakelijk",
+		"linkUrl": "/content/grootzakelijk/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 6,
+		"linkTxt": "Home",
+		"linkUrl": "/"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 7,
+		"linkTxt": "Stroom & Gas",
+		"linkUrl": "/content/particulier/producten/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 8,
+		"linkTxt": "Energieproducten",
+		"linkUrl": "/content/particulier/energie-besparen/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 9,
+		"linkTxt": "Speciaal voor Klanten",
+		"linkUrl": "/content/particulier/speciaal_voor_klanten/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 10,
+		"linkTxt": "Klantenservice",
+		"linkUrl": "/content/particulier/klantenservice/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 11,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 12,
+		"linkTxt": "Bekijk de informatie",
+		"linkUrl": "/content/particulier/producten/stroom_gas/stijgende-energieprijzen.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 13,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 14,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 15,
+		"linkTxt": "Bereken mijn besparing",
+		"linkUrl": "/content/particulier/energie-besparen/isolatie/index.html?icmp=isolatie-campagne:44869:button-berekenmijnbesparing:"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 16,
+		"linkTxt": "Meer over isolatie",
+		"linkUrl": "/content/particulier/energie-besparen/isolatie/index.html?icmp=isolatie-campagne:44869:link-meeroverisolatie:"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 17,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 18,
+		"linkTxt": "Vergelijk onze energieaanbiedingen",
+		"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 19,
+		"linkTxt": "Overstappen naar Essent",
+		"linkUrl": "/content/particulier/producten/stroom_gas/overstappen-energieleverancier.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 20,
+		"linkTxt": "Snel klant worden",
+		"linkUrl": "/content/particulier/producten/klant_worden/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 21,
+		"linkTxt": "Stroom & Gas tarieven",
+		"linkUrl": "/content/particulier/producten/alle_energietarieven/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 22,
+		"linkTxt": "Zonnepanelen",
+		"linkUrl": "/content/particulier/energie-besparen/zonnepanelen/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 23,
+		"linkTxt": "Isolatie",
+		"linkUrl": "/content/particulier/energie-besparen/isolatie/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 24,
+		"linkTxt": "Gratis online huisscan",
+		"linkUrl": "/content/particulier/energie-besparen/plusjehuis/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 25,
+		"linkTxt": "Cv-ketel onderhoud",
+		"linkUrl": "/content/particulier/energie-besparen/verwarmingsinstallaties/service-en-onderhoud/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 26,
+		"linkTxt": "Klantprogramma Thuisvoordeel",
+		"linkUrl": "/content/particulier/speciaal_voor_klanten/thuisvoordeel/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 27,
+		"linkTxt": "Verbruiksmanager+ app",
+		"linkUrl": "/content/particulier/speciaal_voor_klanten/verbruiksmanager/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 28,
+		"linkTxt": "Mijn Essent",
+		"linkUrl": "https://mijn.essent.nl/selectie"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 29,
+		"linkTxt": "Klantenservice",
+		"linkUrl": "/content/particulier/klantenservice/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 30,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 31,
+		"linkTxt": "",
+		"linkUrl": "/content/particulier/producten/stroom_gas/essent-reviews.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 32,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 33,
+		"linkTxt": "Meterstanden doorgeven",
+		"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/meterstand_doorgeven/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 34,
+		"linkTxt": "Mijn verbruik inzien",
+		"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/mijn_essent/inloggen/index.html?gfwizard=verbruiksManager"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 35,
+		"linkTxt": "Termijnbedrag wijzigen",
+		"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/facturen_en_betalen/termijnbedrag/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 36,
+		"linkTxt": "Facturen bekijken",
+		"linkUrl": "https://www.essent.nl/content/particulier/klantenservice/mijn_essent/inloggen/index.html?gftab=jaarafrekening&title=Log%20in%20om%20uw%20jaarafrekening%20te%20bekijken"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 37,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 38,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 39,
+		"linkTxt": "Bekijk Stroom en Gas aanbod",
+		"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 40,
+		"linkTxt": "Lees meer over onze energietarieven",
+		"linkUrl": "/content/particulier/producten/alle_energietarieven/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 41,
+		"linkTxt": "Lees meer over verhuizen en energie",
+		"linkUrl": "/content/particulier/producten/stroom_gas/energie-verhuizen.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 42,
+		"linkTxt": "",
+		"linkUrl": "/#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 43,
+		"linkTxt": "groene stroom",
+		"linkUrl": "https://www.essent.nl/content/particulier/producten/stroom_gas/groene-stroom.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 44,
+		"linkTxt": "stroom- en gasproducten",
+		"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 45,
+		"linkTxt": "zonnepanelen",
+		"linkUrl": "/content/particulier/energie-besparen/zonnepanelen/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 46,
+		"linkTxt": "verwarming",
+		"linkUrl": "https://www.essent.nl/content/particulier/energie-besparen/verwarmingsinstallaties/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 47,
+		"linkTxt": "isolatie",
+		"linkUrl": "https://www.essent.nl/content/particulier/energie-besparen/isolatie/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 48,
+		"linkTxt": "",
+		"linkUrl": "https://facebook.com/Essent"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 49,
+		"linkTxt": "",
+		"linkUrl": "https://twitter.com/essent"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 50,
+		"linkTxt": "",
+		"linkUrl": "https://www.youtube.com/essentnl"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 51,
+		"linkTxt": "",
+		"linkUrl": "https://www.linkedin.com/company/essent"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 52,
+		"linkTxt": "",
+		"linkUrl": "https://www.flickr.com/photos/essentnl"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 53,
+		"linkTxt": "Kennisbank",
+		"linkUrl": "/kennisbank"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 54,
+		"linkTxt": "Particulier",
+		"linkUrl": "/content/particulier/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 55,
+		"linkTxt": "Stroom en gas",
+		"linkUrl": "/content/particulier/producten/stroom_gas/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 56,
+		"linkTxt": "Zonnepanelen",
+		"linkUrl": "/content/particulier/producten/zonne_energie/zonnepanelen/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 57,
+		"linkTxt": "Cv-ketels",
+		"linkUrl": "/content/particulier/producten/verwarmingsinstallaties/cv-ketels/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 58,
+		"linkTxt": "Klantenservice",
+		"linkUrl": "/content/particulier/klantenservice/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 59,
+		"linkTxt": "Zakelijk",
+		"linkUrl": "/content/zakelijk/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 60,
+		"linkTxt": "Zakelijke energie",
+		"linkUrl": "/content/zakelijk/producten/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 61,
+		"linkTxt": "Energie besparen",
+		"linkUrl": "/content/zakelijk/energie-besparen/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 62,
+		"linkTxt": "Offerte aanvragen",
+		"linkUrl": "/content/zakelijk/offerte_aanvragen/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 63,
+		"linkTxt": "Klantenservice",
+		"linkUrl": "/content/zakelijk/ondernemersdesk/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 64,
+		"linkTxt": "Over Essent",
+		"linkUrl": "/content/overessent/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 65,
+		"linkTxt": "Energietransitie",
+		"linkUrl": "/content/overessent/energietransitie/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 66,
+		"linkTxt": "Nieuws en media",
+		"linkUrl": "/content/overessent/actueel/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 67,
+		"linkTxt": "Contact",
+		"linkUrl": "/content/overessent/contactmetessent/index.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 68,
+		"linkTxt": "Bij ons werken",
+		"linkUrl": "https://www.werkenbijessent.nl/"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 69,
+		"linkTxt": "Privacy",
+		"linkUrl": "/privacy"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 70,
+		"linkTxt": "Voorwaarden",
+		"linkUrl": "/content/sitevoorwaarden/algemene_voorwaarden.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 71,
+		"linkTxt": "Kennisbank",
+		"linkUrl": "/kennisbank"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 72,
+		"linkTxt": "Informatie voor toeleveranciers en inkoopvoorwaarden",
+		"linkUrl": "https://www.essent.nl/content/sitevoorwaarden/algemene_inkoopvoorwaarden.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 73,
+		"linkTxt": "Whistleblowing E.ON",
+		"linkUrl": "https://eon-wb.compliancesolutions.com/"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 74,
+		"linkTxt": "E.ON groep",
+		"linkUrl": "https://www.essent.nl/content/sitevoorwaarden/overzicht-websites.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 75,
+		"linkTxt": "privacyverklaring",
+		"linkUrl": "https://www.essent.nl/content/sitevoorwaarden/privacyverklaring.html"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 76,
+		"linkTxt": "instellingen",
+		"linkUrl": "#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 77,
+		"linkTxt": "Ja, ik accepteer cookies",
+		"linkUrl": "#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 78,
+		"linkTxt": "Instellingen",
+		"linkUrl": "#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 79,
+		"linkTxt": "",
+		"linkUrl": "#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 80,
+		"linkTxt": "Akkoord",
+		"linkUrl": "#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 81,
+		"linkTxt": "Akkoord",
+		"linkUrl": "#"
+	},
+	{
+		"type": "linkElement",
+		"element": "a",
+		"linkId": 82,
+		"linkTxt": "Akkoord",
+		"linkUrl": "#"
+	},
+	{
+		"type": "textElement",
+		"element": "h3",
+		"headingId": 0,
+		"headingTxt": "Energie besparen doe je met isolatie via Essent"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 1,
+		"headingTxt": "Wil je juist nu besparen op energie? Isoleer dan je woning! Zo verlaag je de energierekening. Wat bespaar jij?"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 2,
+		"headingTxt": "Bereken mijn besparing"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 3,
+		"headingTxt": "Meer over isolatie"
+	},
+	{
+		"type": "textElement",
+		"element": "h2",
+		"headingId": 4,
+		"headingTxt": "Dit heeft Essent ook voor jou"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 5,
+		"headingTxt": "Bij Essent zit je goed met een scherp energiecontract en belonen we je als vaste klant met Thuisvoordeel.  Maar wist je dat we ook je huis energiezuiniger maken, met zonnepanelen of isolatie bijvoorbeeld?  Dat regelen onze servicepartners, en er zit er altijd eentje bij jou in de buurt."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 6,
+		"headingTxt": ""
+	},
+	{
+		"type": "textElement",
+		"element": "h3",
+		"headingId": 7,
+		"headingTxt": "Stroom & Gas"
+	},
+	{
+		"type": "textElement",
+		"element": "h3",
+		"headingId": 8,
+		"headingTxt": "Energieproducten"
+	},
+	{
+		"type": "textElement",
+		"element": "h3",
+		"headingId": 9,
+		"headingTxt": "Speciaal voor klanten"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 10,
+		"headingTxt": "Onze klanten beoordelen ons met een 8,1"
+	},
+	{
+		"type": "textElement",
+		"element": "h2",
+		"headingId": 11,
+		"headingTxt": "Vandaag geregeld"
+	},
+	{
+		"type": "textElement",
+		"element": "h4",
+		"headingId": 12,
+		"headingTxt": "Stroom en Gas"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 13,
+		"headingTxt": "Voor stroom en gas ben je bij ons aan het goede adres. Vul je postcode en huisnummer in de postcodecheck in en je ziet direct ons aanbod."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 14,
+		"headingTxt": "Bekijk Stroom en Gas aanbod"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 15,
+		"headingTxt": ""
+	},
+	{
+		"type": "textElement",
+		"element": "h4",
+		"headingId": 16,
+		"headingTxt": "Energietarieven"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 17,
+		"headingTxt": "Met de postcodecheck zie je snel en eenvoudig hoe onze energietarieven in jouw situatie uitpakken. Natuurlijk krijg je als nieuwe klant groene stroom bij Essent."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 18,
+		"headingTxt": "Lees meer over onze energietarieven"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 19,
+		"headingTxt": ""
+	},
+	{
+		"type": "textElement",
+		"element": "h4",
+		"headingId": 20,
+		"headingTxt": "Verhuizen"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 21,
+		"headingTxt": "Bij een verhuizing komt een hoop kijken. Ook het regelen van je energiezaken hoort hierbij. Ga je verhuizen en ben je op zoek naar een energieleverancier? Bekijk dan ons aanbod."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 22,
+		"headingTxt": "Lees meer over verhuizen en energie"
+	},
+	{
+		"type": "textElement",
+		"element": "h1",
+		"headingId": 23,
+		"headingTxt": "Energieleverancier Essent"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 24,
+		"headingTxt": "Als energieleverancier helpen we ruim 2,5 miljoen klanten aan energie in de particuliere en zakelijke markt. We helpen je graag om duurzamer te leven én te besparen. Daar hoort vandaag de dag ook groene stroom bij. Daar hoort vandaag de dag ook groene stroom bij. Opgewekt met windmolens en zonnepanelen en steeds meer van Nederlandse bodem."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 25,
+		"headingTxt": "Bij Essent kies je uit een aantal standaard stroom- en gasproducten. Welk contract je ook kiest, bij ons zit je goed. Weten wat je bij het huidige tarief per maand gaat betalen? Vul de postcodecheck in en je weet het binnen 1 minuut."
+	},
+	{
+		"type": "textElement",
+		"element": "h3",
+		"headingId": 26,
+		"headingTxt": "Meer dan alleen een energieleverancier"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 27,
+		"headingTxt": "Essent wil klanten helpen hun huis of zaak comfortabel én energiezuinig te maken. Wij bieden als energiemaatschappij daarom ook andere slimme, energiegerelateerde producten aan. Bijvoorbeeld zonnepanelen om energie te besparen met je eigen dak, verwarming, of isolatie voor een energiezuinige woning. Deze producten worden geleverd door onze servicepartners, van installatie tot en met onderhoud."
+	},
+	{
+		"type": "textElement",
+		"element": "h4",
+		"headingId": 28,
+		"headingTxt": "Volg Essent hier"
+	},
+	{
+		"type": "textElement",
+		"element": "h4",
+		"headingId": 29,
+		"headingTxt": "Particulier"
+	},
+	{
+		"type": "textElement",
+		"element": "h4",
+		"headingId": 30,
+		"headingTxt": "Zakelijk"
+	},
+	{
+		"type": "textElement",
+		"element": "h4",
+		"headingId": 31,
+		"headingTxt": "Over Essent"
+	},
+	{
+		"type": "textElement",
+		"element": "h3",
+		"headingId": 32,
+		"headingTxt": "Energie van vandaag"
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 33,
+		"headingTxt": "©Essent 2022"
+	},
+	{
+		"type": "textElement",
+		"element": "h2",
+		"headingId": 34,
+		"headingTxt": "Om je zo goed mogelijk van dienst te zijn, gebruiken wij cookies."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 35,
+		"headingTxt": "We maken onderscheid tussen noodzakelijke, relevante en externe cookies.         Onze noodzakelijke cookies zorgen ervoor dat de websites goed werken en         gebruiken we voor analytische doeleinden. De relevante en externe         cookies helpen ons om onze websites, apps, e-mails en online         advertenties voor jou relevanter te maken. Daarnaast zorgen externe         cookies ervoor dat je pagina's kunt delen via social media en je         relevante advertenties te zien krijgt op andere websites."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 36,
+		"headingTxt": "Door op 'Ja, ik accepteer cookies' te drukken, geef je aan dat je         akkoord bent met het gebruik van cookies en de verzameling van         informatie op de         websites van           E.ON groep. Meer weten? In onze         privacyverklaring         lees je meer over ons privacybeleid. Bij         instellingen         lees je meer over cookies en past je jouw cookievoorkeuren aan."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 37,
+		"headingTxt": "Deze website maakt gebruik van noodzakelijke cookies, die nodig zijn om         deze site zo goed mogelijk te laten werken. Hieronder kunt u aangeven         welke cookies u wilt accepteren."
+	},
+	{
+		"type": "textElement",
+		"element": "p",
+		"headingId": 38,
+		"headingTxt": "Deze instellingen slaan we op in een cookie. Verwijdert u uw cookies           uit uw browser, dan kunnen we uw keuze niet meer herkennen en           informeren we u opnieuw over het gebruik van cookies en vragen we om           uw toestemming."
+	},
+	{
+		"type": "table",
+		"tableId": 0,
+		"tableHtmlCode": "\n        <tbody>\n          <tr>\n            <th class=\"stLabel\" width=\"48%\">Ik kies cookies die:</th>\n            <th width=\"17%\">noodzakelijk</th>\n            <th width=\"17%\">relevant</th>\n            <th width=\"17%\">extern</th>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">Nodig zijn voor de werking van de website</td>\n            <td class=\"stGroup1\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup2\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">\n              Voorkomen dat gegevens vaker moeten worden ingevuld\n            </td>\n            <td class=\"stGroup1\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup2\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">\n              De website verbeteren op basis van prestaties\n            </td>\n            <td class=\"stGroup1\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup2\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">De snelheid van de website monitoren</td>\n            <td class=\"stGroup1\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup2\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">\n              Bezoekgedrag registreren voor analyse doeleinden\n            </td>\n            <td class=\"stGroup1\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup2\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">\n              Het mogelijk maken om mijn online gedrag te combineren met andere\n              persoonsgegevens om relevante aanbiedingen te ontvangen\n            </td>\n            <td class=\"stGroup1\">&nbsp;</td>\n            <td class=\"stGroup2\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">\n              Het mogelijk maken om onze websites, apps en e-mails aan te passen\n              en te personaliseren\n            </td>\n            <td class=\"stGroup1\">&nbsp;</td>\n            <td class=\"stGroup2\"><span class=\"check_green\">&nbsp;</span></td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">\n              Het mogelijk maken om relevante advertenties van E.ON groep op\n              internet te tonen\n            </td>\n            <td class=\"stGroup1\">&nbsp;</td>\n            <td class=\"stGroup2\">&nbsp;</td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"stLabel\">Sociale media-functies mogelijk maken</td>\n            <td class=\"stGroup1\">&nbsp;</td>\n            <td class=\"stGroup2\">&nbsp;</td>\n            <td class=\"stGroup3\">\n              <span class=\"check_green\">&nbsp;</span>\n            </td>\n          </tr>\n          <tr>\n            <td class=\"padding_akkoord borderless\">&nbsp;</td>\n            <td class=\"padding_akkoord\" align=\"center\" id=\"stSetting-1\">\n              <a href=\"#\" onclick=\"CookieStatement.acceptCookies(1,false);\">Akkoord</a>\n            </td>\n            <td class=\"padding_akkoord\" align=\"center\" id=\"stSetting-2\">\n              <a href=\"#\" onclick=\"CookieStatement.acceptCookies(2,false);\">Akkoord</a>\n            </td>\n            <td class=\"padding_akkoord\" align=\"center\" id=\"stSetting-3\">\n              <a href=\"#\" onclick=\"CookieStatement.acceptCookies(3,false);\">Akkoord</a>\n            </td>\n          </tr>\n        </tbody>\n      "
+	},
+	{
+		"type": "iframe",
+		"iframeTitle": "Box without content",
+		"iframeSrc": "https://halc.iadvize.com/storage.php?type=local&n=1&o=https://www.essent.nl"
+	},
+	{
+		"type": "iframe",
+		"iframeTitle": "Box without content",
+		"iframeSrc": null
+	},
+	{
+		"role": "WebArea",
+		"name": "Energie van je betrouwbare energieleverancier | Essent",
+		"children": [
+			{
+				"role": "link",
+				"name": "Energieleverancier Essent",
+				"description": "Energie van Essent"
+			},
+			{
+				"role": "link",
+				"name": "Inloggen Mijn Essent"
+			},
+			{
+				"role": "link",
+				"name": "Particulier"
+			},
+			{
+				"role": "link",
+				"name": "Zzp"
+			},
+			{
+				"role": "link",
+				"name": "Zakelijk"
+			},
+			{
+				"role": "link",
+				"name": "Grootzakelijk"
+			},
+			{
+				"role": "link",
+				"name": "Stroom & Gas"
+			},
+			{
+				"role": "link",
+				"name": "Energieproducten"
+			},
+			{
+				"role": "link",
+				"name": "Speciaal voor Klanten"
+			},
+			{
+				"role": "link",
+				"name": "Klantenservice"
+			},
+			{
+				"role": "img",
+				"name": "Informatie",
+				"description": "Informatie"
+			},
+			{
+				"role": "text",
+				"name": "We krijgen veel vragen over de hoge energieprijzen."
+			},
+			{
+				"role": "link",
+				"name": "Bekijk de informatie"
+			},
+			{
+				"role": "text",
+				"name": "over de energieprijzen en wat je in jouw situatie kunt doen."
+			},
+			{
+				"role": "heading",
+				"name": "ENERGIE BESPAREN DOE JE MET ISOLATIE VIA ESSENT",
+				"level": 3
+			},
+			{
+				"role": "text",
+				"name": "Wil je juist nu besparen op energie? Isoleer dan je woning! Zo verlaag je de energierekening. Wat bespaar jij?"
+			},
+			{
+				"role": "link",
+				"name": "Bereken mijn besparing"
+			},
+			{
+				"role": "link",
+				"name": "Meer over isolatie"
+			},
+			{
+				"role": "heading",
+				"name": "Dit heeft Essent ook voor jou",
+				"level": 2
+			},
+			{
+				"role": "text",
+				"name": "Bij Essent zit je goed met een scherp energiecontract en belonen we je als vaste klant met Thuisvoordeel."
+			},
+			{
+				"role": "text",
+				"name": "Maar wist je dat we ook je huis energiezuiniger maken, met zonnepanelen of isolatie bijvoorbeeld?"
+			},
+			{
+				"role": "text",
+				"name": "Dat regelen onze servicepartners, en er zit er altijd eentje bij jou in de buurt."
+			},
+			{
+				"role": "text",
+				"name": " "
+			},
+			{
+				"role": "heading",
+				"name": "Stroom & Gas",
+				"level": 3
+			},
+			{
+				"role": "img",
+				"name": "test"
+			},
+			{
+				"role": "link",
+				"name": "Vergelijk onze energieaanbiedingen "
+			},
+			{
+				"role": "link",
+				"name": "Overstappen naar Essent "
+			},
+			{
+				"role": "link",
+				"name": "Snel klant worden "
+			},
+			{
+				"role": "link",
+				"name": "Stroom & Gas tarieven "
+			},
+			{
+				"role": "heading",
+				"name": "Energieproducten",
+				"level": 3
+			},
+			{
+				"role": "img",
+				"name": "test"
+			},
+			{
+				"role": "link",
+				"name": "Zonnepanelen "
+			},
+			{
+				"role": "link",
+				"name": "Isolatie "
+			},
+			{
+				"role": "link",
+				"name": "Gratis online huisscan "
+			},
+			{
+				"role": "link",
+				"name": "Cv-ketel onderhoud "
+			},
+			{
+				"role": "heading",
+				"name": "Speciaal voor klanten",
+				"level": 3
+			},
+			{
+				"role": "img",
+				"name": "test"
+			},
+			{
+				"role": "link",
+				"name": "Klantprogramma Thuisvoordeel "
+			},
+			{
+				"role": "link",
+				"name": "Verbruiksmanager+ app "
+			},
+			{
+				"role": "link",
+				"name": "Mijn Essent "
+			},
+			{
+				"role": "link",
+				"name": "Klantenservice "
+			},
+			{
+				"role": "text",
+				"name": "Onze klanten beoordelen ons met een"
+			},
+			{
+				"role": "text",
+				"name": "8,1"
+			},
+			{
+				"role": "link",
+				"name": ""
+			},
+			{
+				"role": "heading",
+				"name": "Vandaag geregeld",
+				"level": 2
+			},
+			{
+				"role": "link",
+				"name": "Meterstanden doorgeven"
+			},
+			{
+				"role": "link",
+				"name": "Mijn verbruik inzien"
+			},
+			{
+				"role": "link",
+				"name": "Termijnbedrag wijzigen"
+			},
+			{
+				"role": "link",
+				"name": "Facturen bekijken"
+			},
+			{
+				"role": "heading",
+				"name": "9a. image: s en g acties   Stroom en Gas",
+				"level": 4
+			},
+			{
+				"role": "text",
+				"name": "Voor stroom en gas ben je bij ons aan het goede adres. Vul je postcode en huisnummer in de postcodecheck in en je ziet direct ons aanbod."
+			},
+			{
+				"role": "link",
+				"name": "Bekijk Stroom en Gas aanbod",
+				"description": "Bekijk Stroom en Gas aanbod"
+			},
+			{
+				"role": "text",
+				"name": " "
+			},
+			{
+				"role": "heading",
+				"name": "9a. image: energietarieven   Energietarieven",
+				"level": 4
+			},
+			{
+				"role": "text",
+				"name": "Met de postcodecheck zie je snel en eenvoudig hoe onze energietarieven in jouw situatie uitpakken. Natuurlijk krijg je als nieuwe klant groene stroom bij Essent."
+			},
+			{
+				"role": "link",
+				"name": "Lees meer over onze energietarieven",
+				"description": "Lees meer over onze energietarieven"
+			},
+			{
+				"role": "text",
+				"name": " "
+			},
+			{
+				"role": "heading",
+				"name": "Image item - Verblijfsfunctie   Verhuizen",
+				"level": 4
+			},
+			{
+				"role": "text",
+				"name": "Bij een verhuizing komt een hoop kijken. Ook het regelen van je energiezaken hoort hierbij. Ga je verhuizen en ben je op zoek naar een energieleverancier? Bekijk dan ons aanbod."
+			},
+			{
+				"role": "link",
+				"name": "Lees meer over verhuizen en energie",
+				"description": "Lees meer over verhuizen en energie"
+			},
+			{
+				"role": "heading",
+				"name": "Energieleverancier Essent",
+				"level": 1
+			},
+			{
+				"role": "text",
+				"name": "Als energieleverancier helpen we ruim 2,5 miljoen klanten aan energie in de particuliere en zakelijke markt. We helpen je graag om duurzamer te leven én te besparen. Daar hoort vandaag de dag ook"
+			},
+			{
+				"role": "link",
+				"name": "groene stroom"
+			},
+			{
+				"role": "text",
+				"name": "bij. Daar hoort vandaag de dag ook groene stroom bij. Opgewekt met windmolens en zonnepanelen en steeds meer van Nederlandse bodem."
+			},
+			{
+				"role": "text",
+				"name": "Bij Essent kies je uit een aantal standaard"
+			},
+			{
+				"role": "link",
+				"name": "stroom- en gasproducten"
+			},
+			{
+				"role": "text",
+				"name": ". Welk contract je ook kiest, bij ons zit je goed. Weten wat je bij het huidige tarief per maand gaat betalen? Vul de postcodecheck in en je weet het binnen 1 minuut."
+			},
+			{
+				"role": "heading",
+				"name": "Meer dan alleen een energieleverancier",
+				"level": 3
+			},
+			{
+				"role": "text",
+				"name": "Essent wil klanten helpen hun huis of zaak comfortabel én energiezuinig te maken. Wij bieden als energiemaatschappij daarom ook andere slimme, energiegerelateerde producten aan. Bijvoorbeeld"
+			},
+			{
+				"role": "link",
+				"name": "zonnepanelen"
+			},
+			{
+				"role": "text",
+				"name": "om energie te besparen met je eigen dak,"
+			},
+			{
+				"role": "link",
+				"name": "verwarming"
+			},
+			{
+				"role": "text",
+				"name": ", of"
+			},
+			{
+				"role": "link",
+				"name": "isolatie"
+			},
+			{
+				"role": "text",
+				"name": "voor een energiezuinige woning. Deze producten worden geleverd door onze servicepartners, van installatie tot en met onderhoud."
+			},
+			{
+				"role": "heading",
+				"name": "Volg Essent hier",
+				"level": 4
+			},
+			{
+				"role": "link",
+				"name": "",
+				"description": "Facebook Essent"
+			},
+			{
+				"role": "link",
+				"name": "",
+				"description": "Twitter Essent"
+			},
+			{
+				"role": "link",
+				"name": "",
+				"description": "Youtube Essent"
+			},
+			{
+				"role": "link",
+				"name": "",
+				"description": "LinkedIn Essent"
+			},
+			{
+				"role": "link",
+				"name": "",
+				"description": "Flickr Essent"
+			},
+			{
+				"role": "link",
+				"name": "Kennisbank",
+				"description": "Kennisbank Essent"
+			},
+			{
+				"role": "link",
+				"name": "Particulier",
+				"description": "Particulier"
+			},
+			{
+				"role": "link",
+				"name": "Stroom en gas",
+				"description": "Stroom en gas "
+			},
+			{
+				"role": "link",
+				"name": "Zonnepanelen",
+				"description": "Zonnepanelen "
+			},
+			{
+				"role": "link",
+				"name": "Cv-ketels",
+				"description": "Cv-ketels "
+			},
+			{
+				"role": "link",
+				"name": "Klantenservice",
+				"description": "Klantenservice"
+			},
+			{
+				"role": "link",
+				"name": "Zakelijk",
+				"description": "Zakelijk"
+			},
+			{
+				"role": "link",
+				"name": "Zakelijke energie",
+				"description": "Zakelijke energie"
+			},
+			{
+				"role": "link",
+				"name": "Energie besparen",
+				"description": "Energie besparen"
+			},
+			{
+				"role": "link",
+				"name": "Offerte aanvragen",
+				"description": "Offerte aanvragen "
+			},
+			{
+				"role": "link",
+				"name": "Klantenservice",
+				"description": "Klantenservice"
+			},
+			{
+				"role": "link",
+				"name": "Over Essent",
+				"description": "Over Essent"
+			},
+			{
+				"role": "link",
+				"name": "Energietransitie",
+				"description": "Energietransitie"
+			},
+			{
+				"role": "link",
+				"name": "Nieuws en media",
+				"description": "Nieuws en media"
+			},
+			{
+				"role": "link",
+				"name": "Contact",
+				"description": "Contact"
+			},
+			{
+				"role": "link",
+				"name": "Bij ons werken",
+				"description": "Bij ons werken"
+			},
+			{
+				"role": "heading",
+				"name": "Energie van vandaag",
+				"level": 3
+			},
+			{
+				"role": "img",
+				"name": "Energieleverancier Essent"
+			},
+			{
+				"role": "link",
+				"name": "Privacy",
+				"description": "Privacyverklaring van Essent."
+			},
+			{
+				"role": "link",
+				"name": "Voorwaarden",
+				"description": "Lees hier de algemene voorwaarden."
+			},
+			{
+				"role": "link",
+				"name": "Kennisbank",
+				"description": "Bezoek de Kennisbank van Essent"
+			},
+			{
+				"role": "link",
+				"name": "Informatie voor toeleveranciers en inkoopvoorwaarden",
+				"description": "Informatie voor toeleveranciers en inkoopvoorwaarden"
+			},
+			{
+				"role": "link",
+				"name": "Whistleblowing E.ON",
+				"description": "Whistleblowing E.ON"
+			},
+			{
+				"role": "text",
+				"name": "©Essent 2022"
+			},
+			{
+				"role": "heading",
+				"name": "Om je zo goed mogelijk van dienst te zijn, gebruiken wij cookies.",
+				"level": 2
+			},
+			{
+				"role": "text",
+				"name": "We maken onderscheid tussen noodzakelijke, relevante en externe cookies. Onze noodzakelijke cookies zorgen ervoor dat de websites goed werken en gebruiken we voor analytische doeleinden. De relevante en externe cookies helpen ons om onze websites, apps, e-mails en online advertenties voor jou relevanter te maken. Daarnaast zorgen externe cookies ervoor dat je pagina's kunt delen via social media en je relevante advertenties te zien krijgt op andere websites."
+			},
+			{
+				"role": "text",
+				"name": "Door op 'Ja, ik accepteer cookies' te drukken, geef je aan dat je akkoord bent met het gebruik van cookies en de verzameling van informatie op de"
+			},
+			{
+				"role": "text",
+				"name": "websites van"
+			},
+			{
+				"role": "link",
+				"name": "E.ON groep"
+			},
+			{
+				"role": "text",
+				"name": ". Meer weten? In onze"
+			},
+			{
+				"role": "link",
+				"name": "privacyverklaring"
+			},
+			{
+				"role": "text",
+				"name": "lees je meer over ons privacybeleid. Bij"
+			},
+			{
+				"role": "link",
+				"name": "instellingen"
+			},
+			{
+				"role": "text",
+				"name": "lees je meer over cookies en past je jouw cookievoorkeuren aan."
+			},
+			{
+				"role": "link",
+				"name": "Ja, ik accepteer cookies"
+			},
+			{
+				"role": "link",
+				"name": "Instellingen"
+			}
+		]
+	}
+]

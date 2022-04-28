@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A11y - Accessibilty Content Checker</title>
+    <!-- Tailwind CSS CDN -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- <script src="index.js"></script>  -->
+  </head>
+  <body>
+ 
+ 
+    <a name="results"></a>
+    
+    
+       <form>
+         <input type="text" name="url" id="url" nplaceholder="url" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"/>
+    </form>
+
+    <ul id="accessibility"></ul>
+
+
+    <pre id="json"></pre>
+    <div class="px-6" id="resultList">
+      <a name="headings"></a>
+      <div class="w-1 h-5"></div>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">        Headings and paragraphs    </h3>
+      <ul id="myDataTextContent"></ul>
+
+      <a name="links"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Links       </h3>
+      <ul id="myDataLinks"></ul>
+
+      <a name="images"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Images      </h3>
+      <p>
+        <!-- Gray background is added for visibilty of transparant and white images.  -->
+        Broken images are inline svg files(cannot embed them). Background images are not listed.
+      </p>
+      <ul id="myDataImg"></ul>
+
+      <a name="forms"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Forms      </h3>
+      <ul id="myDataForms"></ul>
+
+      <a name="tables"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Tables      </h3>
+      <ul id="myDataTables"></ul>
+
+      <a name="video"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Video      </h3>
+      <ul id="myDataVideo"></ul>
+
+
+      <a name="landmarks"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Landmarks      </h3>
+      <ul id="myDataLandmarks"></ul>
+
+      <a name="area"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Area      </h3>
+      <ul id="myDataArea"></ul>
+
+      <a name="iframe"></a>
+      <h3 class="mt-8 mb-2 text-2xl font-medium leading-tight text-blue-600">         Iframe      </h3>
+      
+      <ul id="myDataIframe"></ul>
+
+      
+
+      <!-- Back to top button sad-->
+
+      <button
+        type="button"
+        class="sticky inline-block float-right p-3 text-xs font-medium leading-tight text-white uppercase transition duration-150 ease-in-out bg-red-600 rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg bottom-5 right-5"
+        id="btn-back-to-top"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          data-prefix="fas"
+          class="w-4 h-4"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="spinnervideo" class="flex items-center justify-center w-full ">
+      <video width="250" autoplay muted loop class="justify-center mx-auto w-96">
+        <source src="/s.mp4" type="video/mp4" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
+
+    <ul id="status"></ul>
+
+
+    <script>
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+
+  const value = data.get('url');
+}
+
+
+const form = document.querySelector('form');
+form.addEventListener('submit', searchShow(url));
+
+
+      const spinner = document.getElementById("spinnervideo");
+      const totalresultlist = document.getElementById("resultList");
+
+      function showSpinner() {
+        spinner.style.display = "block";
+      }
+
+      function hideSpinner() {
+        spinner.style.display = "none";
+      }
+      hideSpinner();
+
+      function hideResults() {
+        totalresultlist.style.display = "none";
+        showSpinner()
+      }
+      hideResults();
+
+      function showResultsList() {
+        totalresultlist.style.display = "block";
+      }
+
+      let params = new URL(document.location).searchParams;
+      let query = params.get("url");
+      console.log(query);
+
+
+      if (query === null){
+        hideSpinner();
+      }
+
+      // let sitemapapiurl = 'https://urlsitemaptool.vercel.app/?xmlsitemap='
+
+      document.getElementById("url").value = query;
+
+      function submit_form(){
+        var form = document.getElementById("my_form");
+        form.submit();
+     
+        // alert("Your Message Sent");
+    }
+
+      searchShow(query);
+
+      async function searchShow(query) {
+      
+        const domainUrl = `${query}`;
+        console.log("DomainUrl", domainUrl);
+        // Trim evt
+        // /sitemap is GET url in Express
+        const apiUrl = "/api?url=";
+        // const apiUrl = "http://localhost:8080/api?url=";
+        // const apiUrl = 'https://sitemap-detector-kykti36joa-nw.a.run.app/sitemap?url='
+
+        function updateStatus() {
+          const status = document.getElementById('status');
+          const li = document.createElement('li');
+          
+          li.innerHTML = 'Ophalen data';
+          status.appendChild(li);
+        }
+
+        const url = 'tst.json'
+
+        
+
+        console.log(url);
+        const response = await fetch(url)
+          .then(function (response) {
+            updateStatus()  
+            return response.json();
+           })
+          .then(function (data) {
+            const textElement = data.filter(function (item) {
+              return item.type === "textElement";
+            });
+          
+            const imageElement = data.filter(function (item) {
+              return item.type === "img";
+            });
+            const linkElement = data.filter(function (item) {
+              return item.type === "linkElement";
+            });
+
+            const formElement = data.filter(function (item) {
+              return item.type === "form";
+            });
+
+            const tableElements = data.filter(function (item) {
+              return item.type === "table";
+            });
+
+            const iframeElements = data.filter(function(item){
+              return item.type === "iframe";
+            })
+
+            // Get top node of the accessibility tree
+            const accRoleElements = data.filter(function(item){
+              return item.role === "WebArea";
+            })
+
+            // const roleElements = accRoleElements.filter(function(item){
+            //   return item.children === "role";
+            // })
+
+
+
+          // const records = accRoleElements;
+          // const results = [];
+          // for (let i = 0; i < records.length; i++) {
+          //   results.push([records[i].total, records[i].role]);
+          // }
+          // console.log('Results filtered subarray',results);
+
+
+            // const accNodes = [data.role]
+            // const roleElements = accNodes.map(item => {
+            //   return {
+            //     "children": {
+            //       "role": item.type,
+            //       "name": item.alt,
+            //     }
+            //   }
+            // }); 
+
+            displayData({
+            //   textElement,
+            //   linkElement,
+            //   imageElement,
+            //   formElement,
+              tableElements,
+            //   iframeElements,
+              accRoleElements
+            });
+            // console.log(data)
+
+           
+            showResultsList();
+            hideSpinner();
+          })
+          .catch(function (err) {
+            console.log("error: " + err);
+          });
+
+        // Code hieronder lijst alle items uit de Json uit. Alle, dus de afbeeldingen, links, headings, tabellen en forms. Wil de items per onderdeel kunnen uitlijsten.
+
+        function displayData(data) {
+
+          console.log('DATA roles',data.accRoleElements)
+          console.log('DATA roles Children',data.accRoleElements[0].children)
+
+
+            const accessbilityList = document.getElementById('accessibility');
+            const accessdata = data.accRoleElements[0].children
+            
+            for (var i = 0; i < accessdata.length; i++){
+                const li = document.createElement('li');
+                li.innerHTML = 'Role =&nbsp;' + accessdata[i].role + ' - &nbsp;(alt)text = &nbsp;' + accessdata[i].name  + ' - &nbsp;description = &nbsp;' + accessdata[i].description 
+                accessbilityList.appendChild(li)
+            }
+
+
+          
+             
+          // event.preventDefault();
+          // PREview van alle Json code !!!!!!!!!!!!!!!!!
+          document.getElementById("json").textContent = JSON.stringify(data, undefined, 2);
+
+        
+
+        //   var mainContainer = document.getElementById("myDataTextContent");
+        //   const textnodes = data.textElement;
+
+        //   for (var i = 0; i < textnodes.length; i++) {
+        //     var li = document.createElement("li");
+        //     li.classList.add('elementItem');
+        //     li.innerHTML = '<div class="inline-block w-5 text-blue-500 text-md">' + textnodes[i].element + "</div>  " + textnodes[i].headingTxt;
+        //     mainContainer.appendChild(li);
+        //   }
+
+        //   const linklist = document.getElementById("myDataLinks");
+        //   console.log(data.linkElement);
+        //   const linkNodes = data.linkElement;
+
+        //   for (var i = 0; i < linkNodes.length; i++) {
+        //     const li = document.createElement("li");
+        //     li.classList.add('elementItem')
+        //     li.innerHTML = '<div class="inline-block w-8 text-blue-500 text-md"> Text</div> &nbsp; "' +  linkNodes[i].linkTxt +  '" &nbsp; <div class="inline-block w-16 text-blue-500 text-md">links to:</div> "' + linkNodes[i].linkUrl +  '"';
+        //     linklist.appendChild(li);
+        //   }
+
+        //   const imageList = document.getElementById("myDataImg");
+        //   const imageNodes = data.imageElement;
+
+        //   for (var i = 0; i < imageNodes.length; i++) {
+        //     const li = document.createElement("li");
+        //     li.classList.add('elementItem')
+        //     li.innerHTML =
+        //       '<img src="' +
+        //       imageNodes[i].src +
+        //       '">' +
+        //       '<div class="inline-block w-24 text-blue-500 text-md"> with alt text</div>' +
+        //       imageNodes[i].alt;
+        //     imageList.appendChild(li);
+        //   }
+
+        //   const formsList = document.getElementById("myDataForms");
+        //   const formsNodes = data.formElement;
+
+        //   if (formsNodes.length === 0 ){
+        //     const li = document.createElement("li");
+        //     li.classList.add('elementItem')
+        //     li.textContent = `No forms found`;
+        //     formsList.appendChild(li);
+        //   }
+        //   else{
+
+        //     for (var i = 0; i < formsNodes.length; i++) {
+        //       const li = document.createElement("li");
+        //       li.textContent = `<div class="inline-block w-24 text-blue-500 text-md">html of the form:</div>` + formsNodes[i].formHtmlCode;
+        //       formsList.appendChild(li);
+        //     }
+        //   }
+            
+         
+
+          const tableList = document.getElementById("myDataTables");
+          const tableNodes = data.tableElements;
+
+          if (tableNodes.length === 0 ){
+            const li = document.createElement("li");
+            li.classList.add('elementItem')
+            li.textContent = `No tables found`;
+            tableList.appendChild(li);
+          }
+          else{
+
+          for (var i = 0; i < tableNodes.length; i++) {
+            const li = document.createElement("li");
+            li.classList.add('elementItem')
+            // li.textContent = '<div class="inline-block w-24 text-blue-500 text-md">html of the table</div>' + tableNodes[i].tableHtmlCode;
+            li.textContent = 'html of the table' + tableNodes[i].tableHtmlCode;
+            tableList.appendChild(li);
+          }
+          }
+
+    //       const iframeList = document.getElementById('myDataIframe');
+    //       const iframeNodes = data.iframeElements;
+
+    //       if(iframeNodes.length === 0){
+    //         const li = document.createElement('li');
+    //         li.classList.add('elementItem');
+    //         li.textContent = `No iframes found`
+    //         iframeList.appendChild(li);
+    //       }
+    // else{
+    //     for (var i = 0; i < iframeNodes.length; i++){
+    //       const li = document.createElement('li')
+    //       li.classList.add('elementItem');
+    //       li.innerHTML = `<div class="inline-block w-24 text-blue-500 text-md">Iframe url</div>` + iframeNodes[i].iframeSrc + `<br><div class="inline-block w-24 text-blue-500 text-md">title</div>` + iframeNodes[i].iframeTitle
+    //       iframeList.appendChild(li);
+    //     }
+    //   }
+
+
+        }
+      }
+    </script>
+
+    <script src="/topbutton.js" defer="defer"></script>
+  </body>
+</html>
